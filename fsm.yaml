@@ -1,0 +1,35 @@
+
+initial: A
+states:
+  - A
+  - B
+  - C
+transitions:
+  -
+    after: func_A
+    dest: B
+    source: A
+    trigger: go
+  -
+    after: func_B
+    dest: C
+    source: B
+    trigger: go
+
+
+  initial: Entrance
+  states:
+    - Entrance
+    - Login
+    - Certified
+  transitions:
+    - after: func_A
+      dest: Login
+      source: Entrance
+      trigger: click("login")
+    - after: func_B
+      dest: Certified
+      source: Login
+      trigger: go
+
+

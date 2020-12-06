@@ -1,0 +1,2028 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&display=swap");
+h1 {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media screen and (min-width: 50rem) {
+  h1 {
+    font-size: calc(1.5rem + 0.5 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media screen and (min-width: 50rem) {
+  h2 {
+    font-size: calc(1.25rem + 0.5 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media screen and (min-width: 50rem) {
+  h3 {
+    font-size: calc(1.125rem + 0.375 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media screen and (min-width: 50rem) {
+  h4 {
+    font-size: calc(1.125rem + 0.125 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+h5 {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media screen and (min-width: 50rem) {
+  h5 {
+    font-size: calc(1rem + 0.25 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
+h6 {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media screen and (min-width: 50rem) {
+  h6 {
+    font-size: calc(1rem + 0.125 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  h6 {
+    font-size: 1.125rem;
+  }
+}
+
+label {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 50rem) {
+  label {
+    font-size: calc(1.125rem + 0.125 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  label {
+    font-size: 1.25rem;
+  }
+}
+
+select {
+  height: 2rem;
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+  border: 0.0625rem solid #2A61AE55;
+  border-radius: 0.5rem;
+  behavior: url("/static/scripts/PIE.htc");
+  font-family: 'Assistant', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 50rem) {
+  select {
+    font-size: calc(1rem + 0.125 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  select {
+    font-size: 1.125rem;
+  }
+}
+
+select[multiple] {
+  height: 8rem;
+}
+
+hr {
+  border-color: #2A61AE;
+}
+
+:root {
+  font-size: 16px;
+}
+
+html {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Assistant', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #29374A;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+html body {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body .website-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  z-index: 0;
+}
+
+html body .website-container .navigation-container {
+  width: 17.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  z-index: 2;
+  color: white;
+  background-color: #2A61AE;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+  -webkit-box-shadow: 0 0.125rem 0.5625rem 0 #2A61AE88;
+  box-shadow: 0 0.125rem 0.5625rem 0 #2A61AE88;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+@media only screen and (max-width: 50rem) {
+  html body .website-container .navigation-container {
+    width: 4.5rem;
+  }
+}
+
+html body .website-container .navigation-container ul {
+  padding: 0;
+  z-index: 0;
+  list-style-type: none;
+}
+
+html body .website-container .navigation-container ul li {
+  padding: 1rem 2rem;
+}
+
+@media only screen and (max-width: 50rem) {
+  html body .website-container .navigation-container ul li {
+    padding: 1rem 1.25rem;
+  }
+}
+
+html body .website-container .navigation-container ul li a {
+  border-bottom: 0.0625rem solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  text-decoration: none;
+  color: white;
+}
+
+html body .website-container .navigation-container ul li a:hover {
+  border-bottom: 0.0625rem solid white;
+}
+
+html body .website-container .navigation-container ul li a img {
+  width: 1.5rem;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+  -webkit-margin-after: 0.25rem;
+          margin-block-end: 0.25rem;
+  z-index: 2;
+}
+
+html body .website-container .navigation-container ul li a .navigation-label {
+  -webkit-margin-before: 0.25rem;
+          margin-block-start: 0.25rem;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 50rem) {
+  html body .website-container .navigation-container ul li a .navigation-label {
+    display: none;
+  }
+}
+
+html body .website-container .navigation-container ul li.selected {
+  position: relative;
+  background-color: #4097B8;
+  font-weight: 700;
+  -webkit-box-shadow: 0 0.125rem 0.5625rem 0 #29374A55;
+  box-shadow: 0 0.125rem 0.5625rem 0 #29374A55;
+  behavior: url("/static/scripts/PIE.htc");
+  -webkit-animation: 250ms ease-in-out 0s 1 fadeIn;
+          animation: 250ms ease-in-out 0s 1 fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html body .website-container .navigation-container ul li.selected:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -0.125rem;
+  width: 0.5rem;
+  height: 100%;
+  background-color: white;
+}
+
+html body .website-container .navigation-container .bottom-nav {
+  width: 17.125rem;
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+
+@media only screen and (max-height: 640px) {
+  html body .website-container .navigation-container .bottom-nav {
+    position: relative;
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 50rem) {
+  html body .website-container .navigation-container .bottom-nav {
+    width: 4.5rem;
+  }
+}
+
+html body .website-container .navigation-container .logo {
+  min-height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #29374A;
+}
+
+html body .website-container .navigation-container .logo .logo-label {
+  padding: 0 2rem;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 50rem) {
+  html body .website-container .navigation-container .logo .logo-label {
+    display: none;
+  }
+}
+
+html body .website-container .navigation-container .logo .logo-image {
+  display: none;
+}
+
+@media only screen and (max-width: 50rem) {
+  html body .website-container .navigation-container .logo .logo-image {
+    display: block;
+    height: 3rem;
+    margin-top: 0.5rem;
+    padding: 0 0.75rem;
+  }
+}
+
+html body .website-container .navigation-container .navigation-selector {
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  width: inherit;
+  height: 2.5rem;
+  z-index: 1;
+  background-color: #4097B8;
+  -webkit-transition: all 150mx ease-in-out;
+  transition: all 150mx ease-in-out;
+}
+
+html body .website-container .navigation-container .navigation-selector .navigation-selector-highlight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.5rem;
+  height: 2.5rem;
+  background-color: white;
+}
+
+.view-container {
+  width: calc(100% - 17.125rem);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  overflow: hidden;
+  font-family: 'Assistant', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #29374A;
+  background-color: white;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 50rem) {
+  .view-container {
+    width: calc(100% - 4.5rem);
+  }
+}
+
+.view-container .status-container {
+  width: 100%;
+  height: 4.5rem;
+  padding: 0 2rem;
+  z-index: 2;
+  background-color: white;
+  -webkit-box-shadow: 0 0.125rem 0.5625rem 0 #2A61AE88;
+  box-shadow: 0 0.125rem 0.5625rem 0 #2A61AE88;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+@media only screen and (max-width: 50rem) {
+  .view-container .status-container {
+    padding: 0 2rem 0 0.5rem;
+  }
+}
+
+.view-container .status-container .status-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view-container .status-container .status-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.view-container .status-container .status-user .profile-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-right: 0.5rem;
+}
+
+.view-container .status-container .status-user .profile-dropdown-arrow {
+  margin-right: 0.5rem;
+}
+
+.view-container .status-container .status-user .profile-dropdown-arrow img {
+  height: 1.5rem;
+}
+
+.view-container .status-container .status-user .profile-image-container img {
+  width: 3rem;
+  height: 3rem;
+  border: 0.0625rem solid #4097B8;
+  border-radius: 50%;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+.view-container .content-container {
+  position: relative;
+  height: calc(100% - 4.5rem);
+  padding: 1rem 3rem;
+  display: block;
+  background-color: #ececec;
+  z-index: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.view-container .content-container .content-title {
+  margin: 0.5rem 0;
+  position: relative;
+  z-index: 9;
+}
+
+.view-container .content-container .canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.view-container .content-container .canvas-container canvas {
+  position: relative;
+  width: calc(100% - 17.125rem);
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.view-container .content-container .canvas-container .diagram-zoom-controls {
+  position: fixed;
+  left: 4.5rem;
+  right: 4.5rem;
+  bottom: 0.5rem;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.view-container .content-container .canvas-container .diagram-zoom-controls button {
+  color: #2A61AE;
+  background-color: white;
+}
+
+.view-container .content-container .canvas-container .diagram-zoom-controls button img {
+  width: 1.5rem;
+}
+
+@media only screen and (max-width: 50rem) {
+  .view-container .content-container .canvas-container .diagram-zoom-controls button .button-label {
+    display: none;
+  }
+}
+
+.view-container .diagram-inspector {
+  width: 17.125rem;
+  height: calc(100% - 4.5rem);
+  position: fixed;
+  top: 4.5rem;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.view-container .diagram-inspector .diagram-inspector-header {
+  padding: 0 1.5rem;
+}
+
+.view-container .diagram-inspector .diagram-inspector-list .diagram-inspector-item {
+  overflow: hidden;
+}
+
+.view-container .diagram-inspector .diagram-inspector-list .diagram-inspector-item .diagram-inspector-item-summary {
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  border: 0.0625rem solid #4097B8;
+  background-color: #eaf6f7;
+}
+
+.view-container .diagram-inspector .diagram-inspector-list .diagram-inspector-item .diagram-inspector-item-summary img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.view-container .diagram-inspector .diagram-inspector-list .diagram-inspector-item .diagram-inspector-item-details {
+  padding: 0 1.5rem;
+  height: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.view-container .diagram-inspector .diagram-inspector-list .diagram-inspector-item[open] .diagram-inspector-item-summary img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.view-container .diagram-inspector .diagram-inspector-list .diagram-inspector-item[open] .diagram-inspector-item-details {
+  padding: 0.5rem 1.5rem;
+  height: auto;
+}
+
+img {
+  display: inline-block;
+}
+
+button,
+input[type=button],
+input[type=submit] {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.0625rem solid #29374A55;
+  outline: none;
+}
+
+@media screen and (min-width: 50rem) {
+  button,
+  input[type=button],
+  input[type=submit] {
+    font-size: calc(1rem + 0 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  button,
+  input[type=button],
+  input[type=submit] {
+    font-size: 1rem;
+  }
+}
+
+button img,
+input[type=button] img,
+input[type=submit] img {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+button img ~ span,
+input[type=button] img ~ span,
+input[type=submit] img ~ span {
+  margin-left: 1rem;
+}
+
+button.cta,
+input[type=button].cta,
+input[type=submit].cta {
+  height: 3rem;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.75rem;
+  behavior: url("/static/scripts/PIE.htc");
+  color: white;
+  background-color: #2A61AE;
+  -webkit-box-shadow: 0 0.125rem 0.5rem 0 #2A61AE88;
+  box-shadow: 0 0.125rem 0.5rem 0 #2A61AE88;
+  behavior: url("/static/scripts/PIE.htc");
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+button.secondary,
+input[type=button].secondary,
+input[type=submit].secondary {
+  height: 3rem;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.75rem;
+  behavior: url("/static/scripts/PIE.htc");
+  color: white;
+  background-color: #29374A;
+  -webkit-box-shadow: 0 0.125rem 0.5rem 0 #2A61AE88;
+  box-shadow: 0 0.125rem 0.5rem 0 #2A61AE88;
+  behavior: url("/static/scripts/PIE.htc");
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+button.silent,
+input[type=button].silent,
+input[type=submit].silent {
+  height: 2.5rem;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0.0625rem solid transparent;
+  border-radius: 1.75rem;
+  behavior: url("/static/scripts/PIE.htc");
+  color: #4097B8;
+  background-color: transparent;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+button.dropdown-button,
+input[type=button].dropdown-button,
+input[type=submit].dropdown-button {
+  background-color: #2A61AE;
+  color: white;
+  border: 0.0625rem solid transparent;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border: 0.0625rem solid #29374A;
+}
+
+button.hidden,
+input[type=button].hidden,
+input[type=submit].hidden {
+  display: none;
+}
+
+@-webkit-keyframes button-hover {
+  0% {
+    background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+  }
+  100% {
+    background-position: 100% 0, 0 100%, 0 0, 100% 100%;
+  }
+}
+
+@keyframes button-hover {
+  0% {
+    background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+  }
+  100% {
+    background-position: 100% 0, 0 100%, 0 0, 100% 100%;
+  }
+}
+
+.button-bar {
+  max-width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media only screen and (max-width: 50rem) {
+  .button-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.item-list .schedule-card {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 1rem;
+  min-height: 4rem;
+}
+
+@media only screen and (max-width: 50rem) {
+  .item-list .schedule-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 8rem;
+  }
+}
+
+.item-list .schedule-card .item-name {
+  margin: 0 1.5rem;
+  justify-self: flex-start;
+}
+
+.item-list .schedule-card .item-number {
+  margin: 0 1.5rem;
+  justify-self: flex-end;
+}
+
+.item-list .schedule-card .item-options {
+  margin: 0 1.5rem;
+  justify-self: flex-start;
+}
+
+.item-list .schedule-card .card-action-icon {
+  margin: 0 1.5rem;
+  justify-self: flex-end;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0.25rem 0.5rem 0 #2A61AE66;
+  box-shadow: 0 0.25rem 0.5rem 0 #2A61AE66;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+.shadow-32 {
+  -webkit-box-shadow: 0 0.5rem 1rem 0 #2A61AE66;
+  box-shadow: 0 0.5rem 1rem 0 #2A61AE66;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+.shadow-hard {
+  -webkit-box-shadow: 0 2rem 4rem 0 #29374A66;
+  box-shadow: 0 2rem 4rem 0 #29374A66;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+.red {
+  color: #CF0B0B;
+}
+
+.green {
+  color: #407040;
+}
+
+.blue {
+  color: #2A61AE;
+}
+
+a {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 50rem) {
+  a {
+    font-size: calc(1rem + 0.125 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  a {
+    font-size: 1.125rem;
+  }
+}
+
+.form-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  background-image: url("/static/images/login_background_full_1.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-animation: 500ms ease-in-out 0s 1 scaleFadeIn;
+          animation: 500ms ease-in-out 0s 1 scaleFadeIn;
+}
+
+@-webkit-keyframes scaleFadeIn {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleFadeIn {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.form-container .form {
+  position: relative;
+  min-width: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 35rem;
+  min-height: 40vh;
+  overflow: hidden;
+  padding: 5rem;
+  behavior: url("/static/scripts/PIE.htc");
+  background-image: url("/static/images/form_background.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9;
+  /* &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 9rem;
+            z-index: -1;
+            //background-color: #eaf6f7;
+
+
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 7.75rem;
+            z-index: -1;
+            //background-color: #eaf6f7;
+            -webkit-box-shadow: 0 0.125rem 0.5625rem 0 #2A61AE88;
+            -moz-box-shadow: 0 0.125rem 0.5625rem 0 #2A61AE88;
+            box-shadow: 0 0.125rem 0.5625rem 0 #2A61AE88;
+            behavior: url("/static/scripts/PIE.htc");
+
+        }*/
+}
+
+.form-container .form .logo {
+  padding: 0.5rem 0 1.0rem 0;
+  text-align: center;
+}
+
+.form-container .form .form-item {
+  margin: 1rem 0;
+  max-width: 22rem;
+  text-align: start;
+}
+
+.form-container .form .form-item label {
+  margin-right: 1rem;
+  min-width: 6rem;
+}
+
+.form-container .form .form-item input[type=checkbox] {
+  border: 0.0625rem #2A61AE;
+}
+
+.form-container .form .form-item input[type=text],
+.form-container .form .form-item input[type=password] {
+  width: 12rem;
+  border: none;
+  border-bottom: 0.0625rem solid #2A61AE;
+}
+
+/**:active{
+    background-color: #4097B8;
+}
+
+*:not(active){
+   
+    transition: all 500ms ease-in-out;
+}*/
+.blue-back {
+  /*background:
+        radial-gradient(circle, transparent 20%, #2A61AE 20%, #2A61AE 80%, transparent 80%, transparent),
+        radial-gradient(circle, transparent 20%, #2A61AE 20%, #2A61AE 80%, transparent 80%, transparent) 50px 50px,
+        linear-gradient(#4097B8 0.5rem, transparent 0.5rem) 0 -4px,
+        linear-gradient(90deg, #4097B8 0.5rem, transparent 0.5rem) -4px 0;*/
+  background-color: #2A61AE;
+}
+
+.quick-dash-container {
+  max-height: 100%;
+  max-width: 60rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "health health news news" "recent recent upcoming upcoming" "startnew startnew startnew startnew";
+}
+
+@media only screen and (max-width: 50rem) {
+  .quick-dash-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-areas: "health" "news" "recent" "upcoming" "startnew";
+  }
+}
+
+.quick-dash-container .item {
+  display: block;
+  margin: 0.5rem 2rem 2rem 0;
+}
+
+.quick-dash-container .item .more {
+  width: 100%;
+  max-width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.25rem;
+}
+
+.quick-dash-container .item .more:hover {
+  text-decoration: underline;
+}
+
+.quick-dash-container .g1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: health;
+}
+
+.quick-dash-container .g2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: news;
+}
+
+.quick-dash-container .g3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: recent;
+}
+
+.quick-dash-container .g4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: upcoming;
+}
+
+.quick-dash-container .g9 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: startnew;
+}
+
+.overview-dash-container {
+  max-width: 60rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 3fr;
+      grid-template-rows: 1fr 1fr 3fr;
+      grid-template-areas: "paths paths access access" "processflows processflows access access" "trends trends trends trends";
+}
+
+@media only screen and (max-width: 50rem) {
+  .overview-dash-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 3fr 3fr;
+        grid-template-rows: 1fr 1fr 3fr 3fr;
+        grid-template-areas: "paths" "processflows" "access" "trends";
+  }
+}
+
+.overview-dash-container .item {
+  margin: 0.5rem 0 2rem 2.5rem;
+}
+
+.overview-dash-container .item .card {
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .overview-dash-container .item .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -moz-flex-direction: column;
+  }
+}
+
+.overview-dash-container .item .card .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-dash-container .item .card .info-container .info-number {
+  color: #4097B8;
+}
+
+.overview-dash-container .item .card .info-container .info-label {
+  text-align: center;
+}
+
+.overview-dash-container .item .more {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.25rem;
+}
+
+.overview-dash-container .g1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: paths;
+}
+
+.overview-dash-container .g2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: processflows;
+}
+
+.overview-dash-container .g3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: access;
+}
+
+.overview-dash-container .g4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: trends;
+}
+
+.settings-container {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.settings-container .card {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  border: 0.0625rem solid #2A61AE55;
+  background-color: white;
+}
+
+.settings-container .card .radio-container {
+  width: 100%;
+}
+
+.settings-container .card .radio-container input[type=radio] {
+  display: none;
+}
+
+.settings-container .card .radio-container input[type="radio"]:checked + label {
+  border: 0.0625rem solid #2A61AE;
+  background-color: #eaf6f7;
+}
+
+.settings-container .card .radio-container label {
+  margin: 1rem 0.25rem;
+  padding: 0.5rem 1rem;
+  border: 0.0625rem solid #2A61AE55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings-container .card .radio-container label img {
+  height: 2rem;
+}
+
+.card {
+  max-width: 60rem;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  padding: 1rem 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  border: 0.0625rem solid #2A61AE55;
+  outline: 0.0625rem solid transparent;
+  outline-offset: -0.3125rem;
+  border-radius: 0.125rem;
+  behavior: url("/static/scripts/PIE.htc");
+  background-color: white;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.card:hover {
+  border: 0.0625rem solid #4097B8;
+  outline: 0.0625rem solid #4097B855;
+}
+
+table,
+.table {
+  position: relative;
+  width: 100%;
+  max-width: 60rem;
+  max-height: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 0.0625rem solid #2A61AE55;
+  outline: 0.0625rem solid transparent;
+  outline-offset: -0.3125rem;
+  border-radius: 0.125rem;
+  behavior: url("/static/scripts/PIE.htc");
+  background-color: white;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+@media screen and (min-width: 50rem) {
+  table,
+  .table {
+    font-size: calc(1rem + 0 * (100vw - 50rem) / 25);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  table,
+  .table {
+    font-size: 1rem;
+  }
+}
+
+table:hover,
+.table:hover {
+  border: 0.0625rem solid #4097B8;
+  outline: 0.0625rem solid #4097B855;
+}
+
+table tr,
+.table tr {
+  position: relative;
+  outline: 0.0625rem solid transparent;
+  outline-offset: -0.3125rem;
+  background-color: #2A61AE;
+}
+
+table tr th,
+.table tr th {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  color: white;
+}
+
+table tr th .run-column,
+.table tr th .run-column {
+  position: relative;
+  width: 2rem;
+}
+
+table tr td,
+.table tr td {
+  position: relative;
+  vertical-align: middle;
+  padding: 0.75rem 1.25rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+}
+
+table tr td.action-container,
+.table tr td.action-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+}
+
+table tr td img,
+.table tr td img {
+  position: relative;
+  display: block;
+  margin: auto;
+  height: 2rem;
+}
+
+table tr td input,
+.table tr td input {
+  position: relative;
+  width: 100%;
+  border: 0.0625rem solid #4097B8;
+  border-bottom: none;
+  border-radius: 0.125rem;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+table tr td .short-column,
+.table tr td .short-column {
+  position: relative;
+  width: 2rem;
+}
+
+table tr:nth-child(2n),
+.table tr:nth-child(2n) {
+  background-color: #eaf6f7;
+}
+
+table tr:nth-child(2n+3),
+.table tr:nth-child(2n+3) {
+  background-color: white;
+}
+
+table tr:hover,
+.table tr:hover {
+  outline: 0.0625rem solid #4097B8;
+}
+
+.schedule-settings-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /*.card {
+
+
+        .schedule-sentence {
+            padding: 0.5rem 0 1rem 0;
+
+            div {
+                border: 0.0625rem solid #29374A;
+                border-radius: 0.5rem;
+                behavior: url("/static/scripts/PIE.htc");
+                padding: 0.5rem;
+
+                &:hover {
+                    background-color: #eaf6f7;
+                }
+            }
+
+        }
+    }*/
+}
+
+.align-end {
+  max-width: 60rem;
+  text-align: end;
+}
+
+.page-number-link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-number-link-container span {
+  margin-right: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 2rem;
+  height: 2rem;
+  border: 0.0625rem solid #2A61AE55;
+  background-color: white;
+  cursor: pointer;
+}
+
+.page-number-link-container span:hover {
+  background-color: #eaf6f7;
+}
+
+input[type=checkbox] {
+  display: none;
+  position: relative;
+}
+
+input[type=checkbox] + label {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("/static/icons/checkboxempty.svg") no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+
+input[type=checkbox]:checked + label {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("/static/icons/checkboxfull.svg") no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+
+.fl-ro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  margin-right: 0.5rem;
+}
+
+.fl-co {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+}
+
+.fl-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fl-jc-se {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.fl-jc-ce {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fl-jc-fs {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.fl-jc-fe {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.fl-jc-st {
+  -webkit-box-pack: stretsch;
+      -ms-flex-pack: stretsch;
+          justify-content: stretsch;
+}
+
+.fl-ai-ce {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fl-ai-fe {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.spinner-arrow {
+  height: 1rem;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.arrow-up {
+  -webkit-filter: brightness(500%);
+          filter: brightness(500%);
+}
+
+.arrow-up:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.arrow-down {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-filter: brightness(500%);
+          filter: brightness(500%);
+}
+
+.arrow-down:hover {
+  -webkit-transform: rotate(180deg) scale(1.5);
+          transform: rotate(180deg) scale(1.5);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 0.0625rem dotted black;
+  /* If you want dots under the hoverable text */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 7.5rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 0.3125rem 0;
+  border-radius: 0.375rem;
+  behavior: url("/static/scripts/PIE.htc");
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.context-menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  -webkit-transform: translateX(-8rem);
+          transform: translateX(-8rem);
+  border: 0.0625rem solid #4097B8;
+  background-color: white;
+}
+
+.context-menu::after {
+  content: " ";
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -0.3125rem;
+  border-width: 0.625rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #4097B8;
+}
+
+.context-menu a {
+  color: #2A61AE;
+}
+
+.context-menu a div {
+  padding: 0.5rem 1rem;
+}
+
+.context-menu a div:hover {
+  color: white;
+  background-color: #4097B8;
+}
+
+.ag-context-menu {
+  position: fixed;
+  z-index: 90;
+}
+
+.ag-context-menu .context-menu-arrow {
+  display: block;
+  position: absolute;
+  top: -0.5rem;
+  left: 0rem;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #4097B8;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.ag-context-menu .context-menu-block {
+  display: block;
+  position: absolute;
+  top: -0.75rem;
+  left: 0.25rem;
+  width: 15rem;
+  max-height: 30rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 1px solid #4097B8;
+  background-color: white;
+}
+
+.ag-context-menu .context-menu-block div {
+  list-style: none;
+  padding: 0.25rem 1rem;
+}
+
+.card-label {
+  width: 100%;
+  max-width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  padding: 0.5rem 0;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-label h3 {
+  margin-right: 1rem;
+}
+
+.order-icon {
+  height: 1.5rem;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.shortform {
+  display: none;
+}
+
+@media only screen and (max-width: 75rem) {
+  .shortform {
+    display: block;
+  }
+}
+
+.longform {
+  display: block;
+}
+
+@media only screen and (max-width: 75rem) {
+  .longform {
+    display: none;
+  }
+}
+
+.page-container {
+  width: 100%;
+  margin-left: 0;
+  -webkit-animation: 500ms ease-in-out 0s 1 slideInFromLeft;
+          animation: 500ms ease-in-out 0s 1 slideInFromLeft;
+}
+
+@media screen and (min-width: 100rem) {
+  .page-container {
+    margin-left: calc(0 + 9 * (100vw - 100rem) / 20);
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .page-container {
+    margin-left: 9rem;
+  }
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 100rem) {
+  .page-container {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 50rem) {
+  .page-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.dialog-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #29374ABB;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dialog-container .dialog {
+  display: block;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  background-color: white;
+}
+
+.dialog-container .dialog .dialog-title {
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  background-color: #2A61AE;
+}
+
+.dialog-container .dialog .dialog-title img {
+  display: inline-block;
+  height: 2rem;
+}
+
+.dialog-container .dialog .dialog-content {
+  padding: 2rem 4rem;
+}
+
+.dialog-container .dialog .dialog-actions {
+  padding: 2rem 4rem;
+}
+
+.dialog-container.open {
+  display: block;
+}
+
+.toast {
+  position: fixed;
+  bottom: -4.5rem;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 4.5rem;
+  text-align: center;
+  color: white;
+  background-color: #29374A;
+  opacity: 0;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+
+.toast img {
+  height: 2rem;
+}
+
+.toast.show {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.new-banner {
+  position: relative;
+  width: 0;
+}
+
+.new-banner::after {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 0.125rem);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  padding: 0.5rem 1rem;
+  z-index: -50;
+  font-weight: 600;
+  border-radius: 0 1rem 1rem 0;
+  color: white;
+  background-color: #4097B8;
+  content: 'NEW';
+  -webkit-box-shadow: 0 0.25rem 0.5rem 0 #2A61AE66;
+  box-shadow: 0 0.25rem 0.5rem 0 #2A61AE66;
+  behavior: url("/static/scripts/PIE.htc");
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+@media only screen and (max-width: 100rem) {
+  .new-banner::after {
+    width: 4rem;
+    height: 4rem;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    border-radius: 1rem 1rem 0 0;
+    behavior: url("/static/scripts/PIE.htc");
+  }
+}
+
+details:hover {
+  background-color: #eaf6f7;
+}
+
+.border-label {
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border: 0.0625rem solid #29374A;
+  border-radius: 0.5rem;
+  behavior: url("/static/scripts/PIE.htc");
+}
+
+.border-label:hover {
+  background-color: #eaf6f7;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.checkbox-item {
+  margin-bottom: 1rem;
+}
+
+.editor {
+  max-width: 60rem;
+}
+
+textarea {
+  max-width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

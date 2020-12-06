@@ -1,0 +1,1 @@
+{"nodes": [{"id": 1, "type": "page", "name": "url", "value": "https://www.ynet.co.il", "accessible": ""}, {"id": 2, "type": "login", "name": "user_code", "value": "sharon.moshe@gmail.com", "accessible": ""}, {"id": 3, "type": "login", "name": "password", "value": "", "accessible": ""}, {"id": 4, "type": "control", "name": "", "value": "", "accessible": ""}]}

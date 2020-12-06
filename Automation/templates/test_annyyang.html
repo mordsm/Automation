@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
+</head>
+<body>
+<form id="speech" method="post" action="command">
+    <input id="command" name="command" hidden/>
+
+
+</form>
+<script>
+window.onload = function(){
+    if (annyang) {
+        var commands = {
+            'Partner': function() {
+                document.getElementById('command').value =  commands.Partner.name;
+                speech.submit();
+                alert('Partner');
+            },
+            'Bank Hapoalim': function() {
+                document.getElementById('command').value =  commands.Bank.name;
+                speech.submit();
+                alert('Bank');
+            },
+            'Bank': function() {
+                document.getElementById('command').value =  commands.Bank.name;
+                speech.submit();
+                alert('Bank');
+            }
+,
+            'stocks': function() {
+                document.getElementById('command').value =  'stocks';
+                speech.submit();
+                alert('Stocks');
+            }
+
+        };
+        annyang.addCommands(commands);
+        annyang.start();
+
+    }
+}
+</script>
+
+</body>
+</html>

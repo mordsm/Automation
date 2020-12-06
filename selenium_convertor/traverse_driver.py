@@ -1,0 +1,305 @@
+import json
+import time
+import logging
+from time import sleep
+from selenium.webdriver.common.by import By
+import vlc
+import speech_recognition as sr
+
+logger = logging.getLogger(__name__)
+
+from voice_chat.models import Sites
+from gtts import gTTS
+from langdetect import detect
+from googletrans import Translator
+
+
+
+'''
+     def __init__(self, file):
+       with open(file, 'r') as f:
+           self.data = json.load(f)
+   '''
+
+
+class Traverse():
+
+    def __init__(self, driver):
+        self.driver = driver
+
+    def __set__(self, base, name, script, path, is_logged):
+        self.path = path
+        self.is_logged = is_logged
+        self.base = base
+        self.name = name
+        self.data = json.loads(script)
+
+    def text_to_speech(self, text):
+
+        try:
+            tts = gTTS(text)
+            tts.save('voice.mp3')
+            vlc.MediaPlayer('voice.mp3').play()
+
+        except Exception as e:
+            logger.error(e)
+
+    def teardown_method(self, method):
+        self.driver.quit()
+
+    def wait_for_window(self, timeout=2):
+        time.sleep(round(timeout / 1000))
+        wh_now = self.driver.window_handles
+        wh_then = self.vars["window_handles"]
+        if len(wh_now) > len(wh_then):
+            return set(wh_now).difference(set(wh_then)).pop()
+
+    def traverse(self):
+        try:
+            tests = self.data["tests"]
+            for test in tests:
+                for command in test["commands"]:
+                    accessible_name, title = self.action(command)
+                    command["name"] = accessible_name
+                    command["title"] = title
+            script = json.dumps(self.data)
+            Sites.objects.filter(name=self.name).update(script=script)
+        except Exception as e:
+            logger.error("traverse error : {} ".format(e))
+    def front_end_traverse(self):
+        logger.info("Starting 'front_end_traverse'")
+        try:
+            script = self.convert_to_js(self.data)
+        except Exception as e:
+            logger.error("traverse error : {} ".format(e))
+
+    def tree_traverse(self):
+        logger.info("Starting 'tree_traverse'")
+        try:
+            parts = self.data[self.base]
+            self.convert_to_js(self.data)
+            start = 0
+            if self.is_logged:
+                start = 1
+                self.action(self.data["home"])
+
+            for action in self.path[start:]:
+                part = [item for item in self.data[self.base] if item["name"] == action]
+
+                # part = self.data[action]
+                for command in part[0]["commands"]:
+                    accessible_name, title = self.action(command)
+                    command["name"] = accessible_name
+                    command["title"] = title
+            script = json.dumps(self.data)
+            Sites.objects.filter(name=self.name).update(script=script)
+        except Exception as e:
+            logger.error("traverse error : {} {}".format(e, part))
+
+    def get_locator(self, target):
+        if target[0].startswith("css"):
+            return By.CSS_SELECTOR
+        elif target[0].startswith("xpath"):
+            return By.XPATH
+        elif target[0].startswith("id"):
+            return By.ID
+
+    def get_transcript(self):
+        try:
+            r = sr.Recognizer()
+            with sr.Microphone() as source:
+                r.adjust_for_ambient_noise(source)
+                audio = r.listen(source, timeout=4)
+                if audio is None:
+                    return None
+                logger.info("Recognizing Now ... ")
+                return r.recognize_google(audio)
+        except Exception as e:
+            logger.error("get_transcript: {e}")
+
+    def get_user_answer(self, question):
+        try:
+            while True:
+                self.text_to_speech(question)
+                transcript = self.get_transcript()
+                if transcript == "quit":
+                    return None
+                self.text_to_speech("Did You  say : " + transcript + "? y(es) / n(o)")
+                confirm = self.get_transcript()
+                if confirm == 'y' or 'yes':
+                    return transcript
+        except Exception as e:
+            logger.error("get_user_answer: {}".format(e))
+            return None
+
+    def getTranslate(self,text, **kwargs):
+        #translator = Translator()
+        translator = Translator(service_urls=['translate.googleapis.com'])
+
+        result = None
+        i = 0;
+        while result == None and i < 3:
+            try:
+                result = translator.translate(text)
+            except Exception as e:
+                i = i+1
+                print(e)
+                #translator = Translator()
+                sleep(0.5)
+                pass
+        return result
+    def build_question(self, field_name):
+        result = None
+        try:
+            lang = detect(field_name)
+            if lang == "he":
+                field_name = self.getTranslate(field_name,dest="en")
+            if field_name != None:
+                field = field_name.text
+            else:
+                field = ""
+                    #translator.translate(field_name).pronunciation
+            result = "please enter " + field
+            return result
+        except Exception as e:
+            print("build_question : {} ".format(e))
+
+    def action(self, command):
+        logger.info("starting 'action'")
+        try:
+            result = None
+            if command["command"] == "open":
+                element = self.driver.get(command["target"])
+                result = self.driver.title
+
+            elif command["command"] == "setWindowSize":
+                sizes = command["target"].split("x")
+                element = self.driver.set_window_size(int(sizes[0]), int(sizes[1]))
+            elif command["command"] == "selectFrame":
+                time.sleep(1)
+                frame = command["target"].split("=")[1]
+                if frame.isnumeric():
+                    self.driver.switch_to.frame(int(frame))
+                elif frame == "parent":
+                    self.driver.switch_to.default_content()
+                # self.wait_for_window()
+
+            elif command["command"] == "click":
+                element, result = self.find_element(command)
+                if element:
+                    try:
+                        lang = detect(result)
+                        if lang == "he":
+                            result_en = translator.translate(result)
+                            self.text_to_speech("please enter " + result_en.pronunciation)
+                            print(result_en.pronunciation)
+                        else:
+                            self.text_to_speech("please enter " + result)
+                            print(result.pronunciation)
+                        element.click()
+                    except Exception as e:
+                        print("error {} on command {} ".format(e, command))
+                else:
+                    print(command)
+
+            elif command["command"] == "type":
+                element, result = self.find_element(command)
+                element.send_keys(command["value"])
+            elif command["command"] == "mouseOver":
+                element, result = self.find_element(command)
+            elif command["command"] == "mouseOut":
+                element, result = self.find_element(command)
+            elif command["command"] == "doubleClick":
+                element, result = self.find_element(command)
+                element.click()
+            elif command["command"] == "storeWindowHandle":
+                element, result = self.find_element(command)
+
+            elif command["command"] == "doubleClick":
+                element, result = self.find_element(command)
+
+            return result, self.driver.title
+        except Exception as e:
+            logger.error("action error : {}".format(e))
+        logger.info("Ending 'action'")
+
+    def find_element(self, command):
+        logger.info("Starting 'find_element'")
+        result = None
+        element = None
+        for target in command["targets"]:
+            try:
+                element = self.driver.find_element(self.get_locator(target), target[0].split("=", 1)[1])
+                if element.tag_name == "span":
+                    if element.text:
+                        result = element.text
+                        break
+                elif element.tag_name == "input":
+                    result = self.driver.find_element_by_xpath(
+                        '//label[@for="' + element.get_attribute('id') + '"]').text
+                    break
+                elif element.tag_name == "button":
+                    result = element.text
+                    break
+                elif element.tag_name == "a":
+                    result = element.text
+                    if result == "":
+                        result = element.get_attribute("title")
+                    if result == None:
+                        result = element.get_attribute("aria-label")
+                    break
+            except Exception as e:
+                pass
+        logger.info("Ending 'find_element'")
+        return element, result
+
+    def convert_to_js(self, data,action):
+        try:
+            js_data = {}
+            key = action
+            js_data[key] = []
+            #for request in json.loads(data)[key]:
+            for request in list(json.loads(data).values())[0]:
+                part = {}
+                part["name"] = request["name"]
+                part["commands"] = []
+                for action in request["commands"]:
+                    if action["command"] == 'click':
+                        target = action["target"];
+                        target_parts = target.split("=");
+                        if target_parts[0] == "id":
+                            result = "$('#" + target_parts[1] + "').click()"
+                        elif target_parts[0] == "css":
+                            result = "$('" + target_parts[1] + "').click()"
+                        elif target_parts[0] == "linkText":
+                            result = "$('a:contains(" + target_parts[1] + "').click()"
+
+                    elif action["command"] == 'type':
+                        question = self.build_question(action['name'])
+                        result = 'get_user_answer("' + question + '")'
+                        part["commands"].append(result);
+                        target = action["target"];
+                        target_parts = target.split("=");
+                        if target_parts[0] == "id":
+                            result = "$('#" + target_parts[1] + "').val(" + result + ")"
+                        elif target_parts[0] == "css":
+                            result = "$(" + target_parts[1] + ").val(" + result + ")"
+
+                    elif action["command"] == 'open':
+                        temp_url = "https://login.bankhapoalim.co.il/ng-portals/auth/he/?frame=false"
+                        result = "window.location = '" + action["target"] + "'"
+                        #result = "window.location = '" + temp_url + "'"
+
+                    elif action["command"] == 'setWindowSize':
+                        width = action["target"].split("x")[0]
+                        height = action["target"].split("x")[1]
+                        result = "window.resizeTo(" + width + "," + height + ")";
+                    elif action["command"] == 'selectFrame':
+                        result = "parent.frames[" + action["target"].split("=")[1]+ "]"
+                    part["commands"].append(result);
+                js_data[key].append(part)
+
+        except Exception as e:
+            logger.error("convert_to_js {}".format(e),exc_info=True)
+            js_data = None
+        return js_data

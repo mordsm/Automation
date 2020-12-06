@@ -1,0 +1,468 @@
+{
+  "id": "f175d90c-7776-41b8-8a3f-696c00df1f7a",
+  "version": "2.0",
+  "name": "record_Account",
+  "url": "https://www.bankhapoalim.co.il",
+  "tests": [{
+    "id": "8ddfffd0-6494-4da0-b3b5-e82d59472df7",
+    "name": "Untitled",
+    "commands": [{
+      "id": "73972433-5c91-49ac-8962-33285419cfbb",
+      "comment": "",
+      "command": "open",
+      "target": "/he",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8bab7b6-a229-49d9-8605-7892abd58e3c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1853x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bae9a9a1-ae41-464f-9e2a-c942814802cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-button > .desktop",
+      "targets": [
+        ["css=.login-button > .desktop", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fcbe391-9bea-4831-8ca8-c041387b6425",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6e4d2c7-de85-46ea-a755-c48898a8fb57",
+      "comment": "",
+      "command": "click",
+      "target": "id=userCode",
+      "targets": [
+        ["id=userCode", "id"],
+        ["css=#userCode", "css:finder"],
+        ["xpath=//input[@id='userCode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c338c32-9d96-4dd0-a790-c57e1866cfa4",
+      "comment": "",
+      "command": "type",
+      "target": "id=userCode",
+      "targets": [
+        ["id=userCode", "id"],
+        ["css=#userCode", "css:finder"],
+        ["xpath=//input[@id='userCode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "vn02727"
+    }, {
+      "id": "c1373756-38ed-4451-8853-df1e4d104b9b",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/poalim-mm-field/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e69ae227-bfc4-4277-96c6-c9304c676e2b",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/poalim-mm-field/div/input", "xpath:position"]
+      ],
+      "value": "mordsmi8"
+    }, {
+      "id": "46616b6e-71cd-4177-a744-df81437f4e69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.red-coloring-btn",
+      "targets": [
+        ["css=.red-coloring-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'כניסה')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85e5dfce-7e1a-44b7-a22a-cf5ac4ea57ae",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "826d5048-62f5-4b88-bfb9-cf66c513dcc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=rb-accounts-filter-0",
+      "targets": [
+        ["id=rb-accounts-filter-0", "id"],
+        ["css=#rb-accounts-filter-0", "css:finder"],
+        ["xpath=//button[@id='rb-accounts-filter-0']", "xpath:attributes"],
+        ["xpath=//section[@id='toolbar']/poalim-accounts-filter/div/button", "xpath:idRelative"],
+        ["xpath=//poalim-accounts-filter/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c7287bc-af5d-4109-a61f-c16f00769417",
+      "comment": "",
+      "command": "click",
+      "target": "css=.account-item:nth-child(3) > label",
+      "targets": [
+        ["css=.account-item:nth-child(3) > label", "css:finder"],
+        ["xpath=//ul[@id='rb-accounts-filter-0-account-list']/li[3]/label", "xpath:idRelative"],
+        ["xpath=//li[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'91-396646')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd835b7d-934f-400d-8925-d4456f4e160b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77a0b41f-b3a5-4e05-9049-6dc490deffcc",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a7bac1b-d9af-4d5d-8457-1deada5ad096",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=mega-menu-0",
+      "targets": [
+        ["id=mega-menu-0", "id"],
+        ["css=#mega-menu-0", "css:finder"],
+        ["xpath=//a[@id='mega-menu-0']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ng-portals-bt/rb/he/homepage')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1c37a5f-f3bd-4f9d-bfcd-d7c959fa7f44",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=mega-menu-0",
+      "targets": [
+        ["id=mega-menu-0", "id"],
+        ["css=#mega-menu-0", "css:finder"],
+        ["xpath=//a[@id='mega-menu-0']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ng-portals-bt/rb/he/homepage')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48fc2f1e-e27b-4e19-b9fa-04f851c5dfa7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c85a834f-fc01-4b56-9a73-4b4c78a93ffa",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f01ce3b-4e91-4e78-9b1d-49365a1b97d1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=mega-menu-2",
+      "targets": [
+        ["id=mega-menu-2", "id"],
+        ["css=#mega-menu-2", "css:finder"],
+        ["xpath=//a[@id='mega-menu-2']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/plastic-cards')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39c379db-bf94-48f4-ac88-55eb190c7a8a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=mega-menu-2",
+      "targets": [
+        ["id=mega-menu-2", "id"],
+        ["css=#mega-menu-2", "css:finder"],
+        ["xpath=//a[@id='mega-menu-2']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/plastic-cards')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e6d1c84-c22d-44a9-ab23-1a67c78813e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=poalim-header-footer-layout",
+      "targets": [
+        ["css=poalim-header-footer-layout", "css:finder"],
+        ["xpath=//poalim-header-footer-layout", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "396413a0-7e76-495b-a446-264ecf334771",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcb7c27c-1c7b-400b-8d7c-7fe5a45f2d91",
+      "comment": "",
+      "command": "click",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29dc7239-d9e8-44ac-8524-088bcb32aa4d",
+      "comment": "",
+      "command": "click",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e0b3615-ede3-4fe7-9b27-4bb5b012b225",
+      "comment": "",
+      "command": "click",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89031b9b-50e6-4da9-876a-5bbfe63c5d63",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d7d0646-b6a6-4cf0-b643-ed1197b45953",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=mega-menu-1",
+      "targets": [
+        ["id=mega-menu-1", "id"],
+        ["css=#mega-menu-1", "css:finder"],
+        ["xpath=//a[@id='mega-menu-1']", "xpath:attributes"],
+        ["xpath=//nav[@id='main-nav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e9532a0-891b-496d-a784-ab25c4328109",
+      "comment": "",
+      "command": "click",
+      "target": "id=period-filter-button-0",
+      "targets": [
+        ["id=period-filter-button-0", "id"],
+        ["css=#period-filter-button-0", "css:finder"],
+        ["xpath=//button[@id='period-filter-button-0']", "xpath:attributes"],
+        ["xpath=//div[@id='transactions-print-id-12-91-396646']/section/poalim-filter-list/section/div/div/poalim-period-filter/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'תקופה: 30 ימים אחרונים')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ff14cde-2d7d-4db7-82f8-4154fb919814",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divider:nth-child(5) > label",
+      "targets": [
+        ["css=.divider:nth-child(5) > label", "css:finder"],
+        ["xpath=//ul[@id='period-filter-menu-0']/li[5]/label", "xpath:idRelative"],
+        ["xpath=//div/ul/li[5]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "513acb1b-104f-4efd-bb6f-f3c7ae7a28f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-footer:nth-child(7) > .btn3",
+      "targets": [
+        ["css=.dropdown-footer:nth-child(7) > .btn3", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//ul[@id='period-filter-menu-0']/li[7]/button", "xpath:idRelative"],
+        ["xpath=//li[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'הצג')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c63755e8-e969-436b-b164-ab227575136f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-excel",
+      "targets": [
+        ["css=.icon-excel", "css:finder"],
+        ["xpath=//div[@id='transactions-print-id-12-91-396646']/div/poalim-export-navigation/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ng-portals-bt/rb/he/ssb/current-account/transactionsExcel?contentType=excel&sortCode=1&retrievalEndDate=20200903&retrievalStartDate=20190903&accountId=12-91-396646&lang=he&activityTypeCodeAscendingFlag=-1&dateAscendingFlag=1&numOfRows=150&lang=he')]", "xpath:href"],
+        ["xpath=//poalim-export-navigation/ul/li/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8704",
+      "windowTimeout": 2000
+    }, {
+      "id": "4a9ee369-8033-4593-8a81-70e8d62a4eca",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "160a9226-b978-4e59-b668-a112a1d4c417",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8704}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39866796-61db-4c4e-83c6-1334fc253ad2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f8537ce-59c8-40b8-9fe8-f3134dba8f30",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c16415e7-ed93-493e-adea-134f8daf4429",
+      "comment": "",
+      "command": "click",
+      "target": "css=poalim-export-navigation",
+      "targets": [
+        ["css=poalim-export-navigation", "css:finder"],
+        ["xpath=//div[@id='transactions-print-id-12-91-396646']/div/poalim-export-navigation", "xpath:idRelative"],
+        ["xpath=//poalim-export-navigation", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f65433b-e93f-49cc-8b54-5c9703188952",
+      "comment": "",
+      "command": "click",
+      "target": "css=poalim-export-navigation",
+      "targets": [
+        ["css=poalim-export-navigation", "css:finder"],
+        ["xpath=//div[@id='transactions-print-id-12-91-396646']/div/poalim-export-navigation", "xpath:idRelative"],
+        ["xpath=//poalim-export-navigation", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "435e9f28-afa6-4868-b0bf-d355f4f85236",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=poalim-export-navigation",
+      "targets": [
+        ["css=poalim-export-navigation", "css:finder"],
+        ["xpath=//div[@id='transactions-print-id-12-91-396646']/div/poalim-export-navigation", "xpath:idRelative"],
+        ["xpath=//poalim-export-navigation", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "99f62fab-4e5d-4a68-bbe8-c242d9ab3831",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8ddfffd0-6494-4da0-b3b5-e82d59472df7"]
+  }],
+  "urls": ["https://www.bankhapoalim.co.il/"],
+  "plugins": []
+}

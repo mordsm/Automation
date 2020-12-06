@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-Icon_Graph_14">
+      <rect width="64" height="64"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_Graph_14" data-name="Icon Graph – 14" clip-path="url(#clip-Icon_Graph_14)">
+    <g id="A_Icon_Logo" data-name="A Icon Logo">
+      <rect id="Rectangle_230" data-name="Rectangle 230" width="64" height="64" fill="#fff" opacity="0"/>
+      <path id="Subtraction_42" data-name="Subtraction 42" d="M9235,952h-8a24,24,0,0,1,48,0h-8a16,16,0,0,0-32,0Z" transform="translate(-9219 -912.001)" fill="#fff"/>
+      <circle id="Ellipse_73" data-name="Ellipse 73" cx="6" cy="6" r="6" transform="translate(26 35.998)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

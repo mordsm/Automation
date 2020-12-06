@@ -1,0 +1,13 @@
+process:
+  precondition:
+    - precondition1
+    - precondition2
+  stages:
+    - stage1:
+        - "create vtt code"
+        - "convert to promise"
+    - stage2:
+        - "create tts code"
+        - "convert to promise"
+    - stage3:
+        - "create async method using await on vtt and tts methods"

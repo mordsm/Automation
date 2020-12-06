@@ -1,0 +1,8 @@
+<svg id="A_Icon_Stack_Areas" data-name="A Icon Stack Areas" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <path id="Path_62" data-name="Path 62" d="M0,0,7.333-8,22,0l7.333-11.822L36.667-8,44-16V4.53H0Z" transform="translate(12 51.47)" fill="#2a61ae"/>
+  <path id="Path_63" data-name="Path 63" d="M0,0,8-8,24,0l8-11.822L40-8l8-8V-32l-8,8.451L32-19.47l-8,8L8-16,0-8Z" transform="translate(8 51.47)" fill="none"/>
+  <path id="Path_64" data-name="Path 64" d="M0-19.47l8.143-8L20-19.47l9.333-19.822,7.333,3.822,7.333-8v16H36l-8,8-8,8L8.143-15.255,0-8Z" transform="translate(12 51.47)" fill="#2a61ae"/>
+  <rect id="Rectangle_1534" data-name="Rectangle 1534" width="4" height="48" transform="translate(8 8)" fill="#2a61ae"/>
+  <rect id="Rectangle_1538" data-name="Rectangle 1538" width="48" height="4" transform="translate(8 56)" fill="#2a61ae"/>
+  <rect id="Rectangle_1548" data-name="Rectangle 1548" width="64" height="64" fill="#fff" opacity="0"/>
+</svg>
