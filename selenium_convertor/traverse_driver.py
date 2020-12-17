@@ -276,12 +276,12 @@ class Traverse():
 
                     elif action["command"] == 'type':
                         question = self.build_question(action['name'])
-                        result = 'get_user_answer("' + question + '")'
+                        result = 'var answer = get_user_answer("' + question + '");'
                         part["commands"].append(result);
                         target = action["target"];
                         target_parts = target.split("=");
                         if target_parts[0] == "id":
-                            result = "$('#" + target_parts[1] + "').val(" + result + ")"
+                            result = "$('#" + target_parts[1] + "').val(answer)"
                         elif target_parts[0] == "css":
                             result = "$(" + target_parts[1] + ").val(" + result + ")"
 

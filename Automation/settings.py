@@ -35,11 +35,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
 # Application definition
+SHELL_PLUS = "ipython"
 
 INSTALLED_APPS = [
     'selenium_convertor.apps.SeleniumConvertorConfig',
     'voice_chat.apps.VoiceChatConfig',
     'rest_framework',
+    'crispy_forms',
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

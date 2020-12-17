@@ -20,7 +20,9 @@ from django.views.generic import TemplateView
 from django.views.decorators.csrf import csrf_exempt
 from Automation.templates import HomeView
 from mail_server.views import AutomateMails
-from voice_chat.views import SiteImportView, SiteActivateTrial,  SiteTraversing, ModelsView, \
+from voice_chat import views
+from voice_chat.views import SiteImportView, \
+    SiteActivateTrial, SiteTraversing, ModelsView, \
     BrowserTraversing
 
 
@@ -58,6 +60,8 @@ urlpatterns = [
     url('^browser_request', csrf_exempt(BrowserTraversing.as_view()), name='browser_traversing'),
     url('^models_view', ModelsView.as_view(), name='model_view'),
     url('^automate_mails', AutomateMails.as_view(), name='automate_mails'),
+    #url('^auth', AuthView.as_view(), name='auth_view'),
+    url("^auth",views.auth),
 
 
 ]
