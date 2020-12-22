@@ -1,13 +1,4 @@
 var recognition = new webkitSpeechRecognition();
-if (window.location.href == "https://www.bankhapoalim.co.il/he")
-{
-    GM_setValue("actions","");
-    GM_setValue("index","");
-    GM_setValue("site_name","");
-    GM_setValue("request","");
-    GM_setValue("password","");
-    GM_setValue("code","");
-}
 var voices = null;
 var answer = null;
 var msg = new SpeechSynthesisUtterance();
@@ -61,12 +52,12 @@ window.onload = function() {
         GM_setValue("code",data["code"]);
         GM_setValue("password",data["password"]);
         var script = JSON.parse(GM_getValue("actions"));
-        GM_setValue("request", "login");
+        GM_setValue("request", "בחר חשבון");
         GM_setValue("index", 1);
         GM_setValue("site_name", site_name);
         //TODO when running straight from site openinig we start from second command
         //eval (script[0].commands[0]);
-        activateRequest(script[0], 1)
+        activateRequest(script[1], 1)
 
 
       },
@@ -91,23 +82,6 @@ document.onmusedown = function(event) {
 
     };
 };*/
-
-function simulate_input(element)
-{
-    console.log(element)
-    var event = new Event('input', {
-        bubbles: true,
-        cancelable: true,
-    });
-
-    try
-    {eval(element+".trigger('input')");}
-    catch(error)
-    {
-        try {element.trigger('input')}
-        catch(err) {console.log(err);}}
-}
-
 
 document.onclick = function(event) {
   if (first_time && voices)

@@ -13,8 +13,6 @@ from gtts import gTTS
 from langdetect import detect
 from googletrans import Translator
 
-
-
 '''
      def __init__(self, file):
        with open(file, 'r') as f:
@@ -66,6 +64,7 @@ class Traverse():
             Sites.objects.filter(name=self.name).update(script=script)
         except Exception as e:
             logger.error("traverse error : {} ".format(e))
+
     def front_end_traverse(self):
         logger.info("Starting 'front_end_traverse'")
         try:
@@ -132,8 +131,8 @@ class Traverse():
             logger.error("get_user_answer: {}".format(e))
             return None
 
-    def getTranslate(self,text, **kwargs):
-        #translator = Translator()
+    def getTranslate(self, text, **kwargs):
+        # translator = Translator()
         translator = Translator(service_urls=['translate.googleapis.com'])
 
         result = None
@@ -142,23 +141,24 @@ class Traverse():
             try:
                 result = translator.translate(text)
             except Exception as e:
-                i = i+1
+                i = i + 1
                 print(e)
-                #translator = Translator()
+                # translator = Translator()
                 sleep(0.5)
                 pass
         return result
+
     def build_question(self, field_name):
         result = None
         try:
             lang = detect(field_name)
             if lang == "he":
-                field_name = self.getTranslate(field_name,dest="en")
+                field_name = self.getTranslate(field_name, dest="en")
             if field_name != None:
                 field = field_name.text
             else:
                 field = ""
-                    #translator.translate(field_name).pronunciation
+                # translator.translate(field_name).pronunciation
             result = "please enter " + field
             return result
         except Exception as e:
@@ -253,12 +253,21 @@ class Traverse():
         logger.info("Ending 'find_element'")
         return element, result
 
-    def convert_to_js(self, data,action):
+    '''
+     result = 'get_user_answer("' + question + '").then(ans=>{alert(ans);console.log(ans);' + setAnswer + '}) \
+                                                                         .catch((error) => {console.error(error)});'
+
+                            result = '(async () => {const answer = await get_user_answer("' + question + '");' \
+                                     + setAnswer + '})()'
+
+
+    '''
+    def convert_to_js(self, data, action):
         try:
             js_data = {}
             key = action
             js_data[key] = []
-            #for request in json.loads(data)[key]:
+            # for request in json.loads(data)[key]:
             for request in list(json.loads(data).values())[0]:
                 part = {}
                 part["name"] = request["name"]
@@ -276,30 +285,41 @@ class Traverse():
 
                     elif action["command"] == 'type':
                         question = self.build_question(action['name'])
-                        result = 'var answer = get_user_answer("' + question + '");'
-                        part["commands"].append(result);
+                        # result = 'answer = get_user_answer("' + question + '");'
                         target = action["target"];
                         target_parts = target.split("=");
                         if target_parts[0] == "id":
-                            result = "$('#" + target_parts[1] + "').val(answer)"
+                            element = "$('#" + target_parts[1] + "')"
                         elif target_parts[0] == "css":
-                            result = "$(" + target_parts[1] + ").val(" + result + ")"
+                            element = "$(" + target_parts[1] + ")"
+
+
+                        setAnswer =element+".val(ans)"
+                        result = '(async () => {' \
+                                 'await get_user_answer("' + question + '")' \
+                                '.then((ans)=>{' + setAnswer + ';})' \
+                                '.catch((error) => {console.log(error);})' \
+                                '.finally((ans)=> {ans  = null}); })();'
+                                #'simulate_input('+element+');'
+                        # part["commands"].append(result);
+                # '.then((ans)=>{' + setAnswer + '.trigger("input");})' \
+
 
                     elif action["command"] == 'open':
                         temp_url = "https://login.bankhapoalim.co.il/ng-portals/auth/he/?frame=false"
                         result = "window.location = '" + action["target"] + "'"
-                        #result = "window.location = '" + temp_url + "'"
+                        # result = "window.location = '" + temp_url + "'"
 
                     elif action["command"] == 'setWindowSize':
                         width = action["target"].split("x")[0]
                         height = action["target"].split("x")[1]
                         result = "window.resizeTo(" + width + "," + height + ")";
                     elif action["command"] == 'selectFrame':
-                        result = "parent.frames[" + action["target"].split("=")[1]+ "]"
+                        result = "parent.frames[" + action["target"].split("=")[1] + "]"
                     part["commands"].append(result);
                 js_data[key].append(part)
 
         except Exception as e:
-            logger.error("convert_to_js {}".format(e),exc_info=True)
+            logger.error("convert_to_js {}".format(e), exc_info=True)
             js_data = None
         return js_data
