@@ -17,7 +17,6 @@ from django.forms import model_to_dict
 
 from Automation.common.settings import COMMON
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -40,6 +39,7 @@ SHELL_PLUS = "ipython"
 INSTALLED_APPS = [
     'selenium_convertor.apps.SeleniumConvertorConfig',
     'voice_chat.apps.VoiceChatConfig',
+    'mail_server.apps.MailServerConfig',
     'rest_framework',
     'crispy_forms',
     'django_extensions',

@@ -1,8 +1,8 @@
 import email
 import imaplib
 
-EMAIL = 'sharon.moshe@gmail.com'
-PASSWORD = 'mordsmi4'
+EMAIL = ""
+PASSWORD = ""
 SERVER = 'imap.gmail.com'
 
 # connect to the server and go to its inbox

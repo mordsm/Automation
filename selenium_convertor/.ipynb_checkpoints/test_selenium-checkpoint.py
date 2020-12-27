@@ -38,12 +38,12 @@ class TestUntitled():
     self.driver.getAttribute("linkText");    self.driver.switch_to.frame(0)
     # 5 | click | id=userCode | 
     self.driver.find_element(By.ID, "userCode").click()
-    # 6 | type | id=userCode | vn02727
-    self.driver.find_element(By.ID, "userCode").send_keys("vn02727")
+    # 6 | type | id=userCode |
+    self.driver.find_element(By.ID, "userCode").send_keys("")
     # 7 | click | id=password | 
     self.driver.find_element(By.ID, "password").click()
-    # 8 | type | id=password | mordsmi8
-    self.driver.find_element(By.ID, "password").send_keys("mordsmi8")
+    # 8 | type | id=password
+    self.driver.find_element(By.ID, "password").send_keys("")
     # 9 | click | css=.red-coloring-btn | 
     self.driver.find_element(By.CSS_SELECTOR, ".red-coloring-btn").click()
     # 10 | selectFrame | relative=parent | 
