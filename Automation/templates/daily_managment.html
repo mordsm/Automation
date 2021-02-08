@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+  <h1>Daily Management</h1>
+  <form id="daily" method="post" action="/save_work" class="form-group">
+    <fieldset>
+      <legend>Done</legend>
+      <label for="what_done" >What Done</label>
+      <input class = "form-control" id ="what_done" name ="what_done" type="text" />
+      <label for="how_done" >How</label>
+      <input class = "form-control" id ="how_done" name ="how_done" type="text" />
+      <label for="code" >Enter Code</label>
+      <textarea class = "form-control"  id ="code" name ="code" type="text" ></textarea>
+      <label for="learn" >To Remember</label>
+      <input class = "form-control" id ="learn" name ="learn" type="text" />
+
+    </fieldset>
+    <br/><br/>
+    <fieldset>
+      <legend>Next</legend>
+      <label for="what_next" >What Next</label>
+      <input class = "form-control"  id ="what_next" name ="what_next" type="text" />
+      <label for="how_next" >How</label>
+      <input class = "form-control"  id ="how_next" name ="how_next" type="text" />
+    </fieldset>
+    <br/>
+    <input type="submit" value="Save"/>
+    <!--<button type = "button" id="button">Start listening</button>
+        <div id="result"></div>
+        <p id="message" hidden aria-hidden="true">
+          Your browser doesn't support Speech Recognition. Sorry.
+        </p>-->
+  </form>
+</main>
+<script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const button = document.getElementById("button");
+          const result = document.getElementById("result");
+          const main = document.getElementsByTagName("main")[0];
+          console.log(1)
+          let listening = false;
+          const SpeechRecognition =
+            window.SpeechRecognition || window.webkitSpeechRecognition;
+          if (typeof SpeechRecognition !== "undefined") {
+            const recognition = new SpeechRecognition();
+            console.log(2);
+            const stop = () => {
+              main.classList.remove("speaking");
+              recognition.stop();
+              button.textContent = "Start listening";
+            };
+
+            const start = () => {
+              main.classList.add("speaking");
+              recognition.start();
+              button.textContent = "Stop listening";
+            };
+
+            const onResult = event => {
+            console.log(3)
+              result.innerHTML = "";
+              for (const res of event.results) {
+                const text = document.createTextNode(res[0].transcript);
+                const p = document.createElement("p");
+                console.log(4)
+                if (res.isFinal) {
+                  p.classList.add("final");
+                }
+                p.appendChild(text);
+                result.appendChild(p);
+                console.log(5)
+                speech.value = message
+                speech.form.submit();
+              }
+            };
+            recognition.continuous = true;
+            console.log(6)
+            recognition.interimResults = true;
+            recognition.addEventListener("result", onResult);
+            button.addEventListener("click", event => {
+              listening ? stop() : start();
+              listening = !listening;
+            });
+          } else {
+          console.log(7)
+            button.remove();
+            const message = document.getElementById("message");
+            message.removeAttribute("hidden");
+            message.setAttribute("aria-hidden", "false");
+            recognition.onresult = function(event) {
+
+                console.log(99)
+          }
+          }
+        });
+      </script>
+
+{% endblock %}

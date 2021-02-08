@@ -93,12 +93,11 @@ class SiteActivateTrial(APIView, ContextViewMixIn):
 class SiteTreeActivateTrial(APIView, ContextViewMixIn):
 
  def post(self, request):
-
+        path = []
         context = ContextViewMixIn().context
         logger.info("in SiteTreeActivateTrial POST")
         command = request.data["action"]
-        path = []
-        path.append("login")
+
         try:
             if command == "סיום":
                 if 'current_root' in request.session:
@@ -106,24 +105,23 @@ class SiteTreeActivateTrial(APIView, ContextViewMixIn):
                 return JsonResponse({"status": "succeeded"}, status=HTTP_200_OK)
                 # TODO add tree yaml to sites model
                
-            #script = Sites.objects.filter(name=path[0]).values()[0]['tree_script','site_yaml']
+            #script = Sites.objects.filter(name=request.data["action"]).values()[0]['tree_script','site_yaml']
+            script = Sites.objects.filter(name="בנק הפועלים").values_list('tree_script','site_yaml')
 
-            data = Sites.objects.filter(name=command).values('tree_script', 'site_yaml')
 
-            if 'current_root' in request.session: # we are after login
+            if 'current_root' in request.session:
                 is_logged = True
+
             else:
                 is_logged = False
-                request.session['current_root'] = path[0]
-                path[0] = "login"
+
+                request.session['current_root'] = request.data["action"]
+                path.append("login")
 
             traverse = Traverse(webdriver.Chrome())
             traverse.__set__(request.session['current_root'],
-                             command, data, path,
+                             command, script, path[0],
                              is_logged)
-
-
-
             traverse.tree_traverse()
             return JsonResponse({"status": "succeeded"}, status=HTTP_200_OK)
 
@@ -221,49 +219,7 @@ class SiteTraversing(APIView):
         return JsonResponse({"status": "succeeded"}, status=HTTP_200_OK)
 
 
-'''
-       if request.method == "POST":
-       form = AuthForm(request.POST)
-       if form.is_valid():
-           name = form.cleaned_data('name')
-           code = form.cleaned_data('code')
-           password = form.cleaned_data('password')
-           obj = Config.objects.get_or_create(name=form.name)
-           obj[0].code = form.code  # request.data["code"]
-           obj[0].password = form.password  # request.data["password"]
-           obj[0].save()
-           logger.info("import success")
-           return Response("succeeded", status=HTTP_201_CREATED)
-   else:
-       form = AuthForm()
-   render(request,"auth.html",{'form':form})
 
-   '''
-
-'''
-class AuthView(APIView, ContextViewMixIn):
-
-    def post(self, request):
-        logger.info("in PrivateView POST")
-        name = request.data["name"]
-        try:
-            obj = Config.objects.get_or_create(name=name)
-            obj[0].code = request.data["code"]
-            obj[0].password = request.data["password"]
-            obj[0].save()
-            logger.info("import success")
-            return Response("succeeded", status=HTTP_201_CREATED)
-        except Exception as e:
-            logger.error(e)
-            return Response(e, status=HTTP_400_BAD_REQUEST)
-
-    def get(self,request):
-        context = get_context()
-        logger.info("in Config  GET")
-        name = request.query_params["name"]  # request.data["action"]
-        data = Config.objects.filter(name=name).values('code', 'password')
-
-'''
 
 
 def auth(request):

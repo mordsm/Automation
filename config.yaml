@@ -1,0 +1,16 @@
+config:
+   scan:
+     jump_over:
+       - ","
+       - and
+
+   site:
+       element:
+           - id
+           - name
+           - value
+           - placeholder
+       form:
+           - id
+           - method
+           - action

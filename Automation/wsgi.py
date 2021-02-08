@@ -21,6 +21,10 @@ path = '/home/moshe/workspace/projects/Automation/Automation'
 if path not in sys.path:
     sys.path.append(path)
 
+
+path ='/home/moshe/workspace/projects/Automation/env/lib/python3.7/site-packages'
+if path not in sys.path:
+    sys.path.append(path)
 #path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Automation.settings')
 

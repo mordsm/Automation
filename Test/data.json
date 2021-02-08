@@ -1,0 +1,430 @@
+{
+   "בנק הפועלים":[
+      {
+         "name":"login",
+         "commands":[
+            {
+               "id":"c153076a-8beb-499c-ade7-89837b664130",
+               "comment":"",
+               "command":"open",
+               "target":"https://www.bankhapoalim.co.il/he/login",
+               "targets":[
+
+               ],
+               "value":"",
+               "name":"כניסה לחשבונך - בנק הפועלים",
+               "title":"כניסה לחשבונך - בנק הפועלים"
+            },
+            {
+               "id":"b664752e-9eaf-4c2c-b946-e813561b79aa",
+               "comment":"",
+               "command":"setWindowSize",
+               "target":"1717x1100",
+               "targets":[
+
+               ],
+               "value":"",
+               "name":"",
+               "title":"\\u05db\\u05e0\\u05d9\\u05e1\\u05d4 \\u05dc\\u05d7\\u05le9\\u05d1\\u05d5\\u05e0\\u05da - \\u05d1\\u05e0\\u05e7 \\u05d4\\u05e4\\u05d5\\u05e2\\u05dc\\u05d9\\u05dd"
+            },
+            {
+               "id":"496273d4-f96e-4765-abdc-4b0c11999e4e",
+               "comment":"",
+               "command":"click",
+               "target":"css=.login-button > .desktop",
+               "targets":[
+                  [
+                     "css=.login-button > .desktop",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//li[2]/a/span",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"",
+               "commands":{
+
+               },
+               "name":"כניסה לחשבון",
+               "title":"כניסה לחשבונך - בנק הפועלים"
+            },
+            {
+               "id":"3d9d1a8e-576e-4c77-8339-44c909f91943",
+               "comment":"",
+               "command":"selectFrame",
+               "target":"index=0",
+               "targets":[
+                  [
+                     "index=0"
+                  ]
+               ],
+               "value":"",
+               "name":"",
+               "title":"כניסה לחשבונך - בנק הפועלים"
+            },
+            {
+               "id":"82e1ebf4-0f4f-4d27-9299-a188f6305856",
+               "comment":"",
+               "command":"click",
+               "target":"id=userCode",
+               "targets":[
+                  [
+                     "id=userCode",
+                     "id"
+                  ],
+                  [
+                     "css=#userCode",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//input[@id='userCode']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//input",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"",
+               "name":"קוד משתמש",
+               "title":"כניסה לחשבונך - בנק הפועלים"
+            },
+            {
+               "id":"32b2761d-a819-40e5-aba3-167a9306ab5e",
+               "comment":"",
+               "command":"type",
+               "target":"id=userCode",
+               "targets":[
+                  [
+                     "id=userCode",
+                     "id"
+                  ],
+                  [
+                     "css=#userCode",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//input[@id='userCode']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//input",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"vn02727",
+               "name":"קוד משתמש",
+               "title":"כניסה לחשבונך - בנק הפועלים"
+            },
+            {
+               "id":"78f318cf-65ff-4324-a1bb-fd3ff0546c41",
+               "comment":"",
+               "command":"click",
+               "target":"id=password",
+               "targets":[
+                  [
+                     "id=password",
+                     "id"
+                  ],
+                  [
+                     "css=#password",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//input[@id='password']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//div[2]/poalim-mm-field/div/input",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"",
+               "name":"סיסמה",
+               "title":"כניסה לחשבונך - בנק הפועלים"
+            },
+            {
+               "id":"b8ee6f98-3b94-43aa-93ef-0b08c2e57c8c",
+               "comment":"",
+               "command":"type",
+               "target":"id=password",
+               "targets":[
+                  [
+                     "id=password",
+                     "id"
+                  ],
+                  [
+                     "css=#password",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//input[@id='password']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//div[2]/poalim-mm-field/div/input",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"mordsmi9",
+               "name":"סיסמה",
+               "title":"כניסה לחשבונך - בנק הפועלים"
+            },
+            {
+               "id":"23cfaccf-dfbe-4230-ba36-ea8c33dec81f",
+               "comment":"",
+               "command":"click",
+               "target":"css=.red-coloring-btn",
+               "targets":[
+                  [
+                     "css=.red-coloring-btn",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//button[@type='submit']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//div[3]/button",
+                     "xpath:position"
+                  ],
+                  [
+                     "xpath=//button[contains(.,'כניסה')]",
+                     "xpath:innerText"
+                  ]
+               ],
+               "value":"",
+               "name":"כניסה",
+               "title":"דף הבית"
+            }
+         ]
+      },
+      {
+         "name":"בחר חשבון",
+         "commands":[
+            {
+               "id":"32e274b7-ada2-4643-bec0-f1021c3f1e34",
+               "comment":"",
+               "command":"click",
+               "target":"id=rb-accounts-filter-0",
+               "targets":[
+                  [
+                     "id=rb-accounts-filter-0",
+                     "id"
+                  ],
+                  [
+                     "css=#rb-accounts-filter-0",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//button[@id='rb-accounts-filter-0']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//section[@id='toolbar']/poalim-accounts-filter/div/button",
+                     "xpath:idRelative"
+                  ],
+                  [
+                     "xpath=//poalim-accounts-filter/div/button",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"",
+               "name":"מס' : 91-15596",
+               "title":"דף הבית"
+            },
+            {
+               "id":"ec71af4b-be96-4a13-85cf-300069304f0b",
+               "comment":"",
+               "command":"click",
+               "target":"css=.account-item:nth-child(3) > label",
+               "targets":[
+                  [
+                     "css=.account-item:nth-child(3) > label",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//ul[@id='rb-accounts-filter-0-account-list']/li[3]/label",
+                     "xpath:idRelative"
+                  ],
+                  [
+                     "xpath=//li[3]/label",
+                     "xpath:position"
+                  ],
+                  [
+                     "xpath=//label[contains(.,'91-396646')]",
+                     "xpath:innerText"
+                  ]
+               ],
+               "value":"",
+               "name":"",
+               "title":"דף הבית"
+            }
+         ]
+      },
+      {
+         "name":"עובר ושב",
+         "commands":[
+            {
+               "id":"0aa25f03-28f9-4f1d-a19c-5cc6488b983b",
+               "comment":"",
+               "command":"click",
+               "target":"id=mega-menu-1",
+               "targets":[
+                  [
+                     "id=mega-menu-1",
+                     "id"
+                  ],
+                  [
+                     "css=#mega-menu-1",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//a[@id='mega-menu-1']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//nav[@id='main-nav']/ul/li[2]/a",
+                     "xpath:idRelative"
+                  ],
+                  [
+                     "xpath=//a[contains(@href, '/ng-portals/rb/he/current-account')]",
+                     "xpath:href"
+                  ],
+                  [
+                     "xpath=//li[2]/a",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"",
+               "name":"עובר\nושב",
+               "title":"תנועות בחשבון"
+            }
+         ]
+      },
+      {
+         "name":"תנועות עתידיות",
+         "commands":[
+            {
+               "id":"a788e541-c3ce-4d33-8420-c06f4334c3a2",
+               "comment":"",
+               "command":"click",
+               "target":"linkText=תנועות עתידיות",
+               "targets":[
+                  [
+                     "linkText=תנועות עתידיות",
+                     "linkText"
+                  ],
+                  [
+                     "css=.card-body li:nth-child(2) > a",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//a[contains(text(),'תנועות עתידיות')]",
+                     "xpath:link"
+                  ],
+                  [
+                     "xpath=//div[@id='currentAccountInfoAndTransactions']/div/ul/li[2]/a",
+                     "xpath:idRelative"
+                  ],
+                  [
+                     "xpath=//a[contains(@href, '/ng-portals-bt/rb/he/current-account/future-transactions')]",
+                     "xpath:href"
+                  ],
+                  [
+                     "xpath=//div[2]/div/ul/li[2]/a",
+                     "xpath:position"
+                  ],
+                  [
+                     "xpath=//a[contains(.,'תנועות עתידיות')]",
+                     "xpath:innerText"
+                  ]
+               ],
+               "value":"",
+               "name":"תנועות עתידיות",
+               "title":"תנועות עתידיות"
+            }
+         ]
+      },
+      {
+         "name":"Home",
+         "commands":[
+            {
+               "id":"a788e541-c3ce-4d33-8420-c06f4334c3a2",
+               "comment":"",
+               "command":"click",
+               "target":"id=mega-menu-0",
+               "targets":[
+                  [
+                     "id=mega-menu-0",
+                     "id"
+                  ],
+                  [
+                     "css=#mega-menu-0",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//a[@id='mega-menu-0']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//nav[@id='main-nav']/ul/li/a",
+                     "xpath:idRelative"
+                  ],
+                  [
+                     "xpath=(//a[contains(@href, '/ng-portals/rb/he/homepage')])[2]",
+                     "xpath:href"
+                  ],
+                  [
+                     "xpath=//li/a",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"",
+               "name":"Home",
+               "title":"Home"
+            }
+         ]
+      },
+      {
+         "commands":[
+            {
+               "id":"44531362-8805-429a-a0c0-dd5b7c66d93a",
+               "comment":"",
+               "command":"click",
+               "target":"id=mega-menu-8",
+               "targets":[
+                  [
+                     "id=mega-menu-8",
+                     "id"
+                  ],
+                  [
+                     "css=#mega-menu-8",
+                     "css:finder"
+                  ],
+                  [
+                     "xpath=//a[@id='mega-menu-8']",
+                     "xpath:attributes"
+                  ],
+                  [
+                     "xpath=//nav[@id='main-nav']/ul/li[9]/a",
+                     "xpath:idRelative"
+                  ],
+                  [
+                     "xpath=//a[contains(@href, '/ng-portals/rb/he/pfm')]",
+                     "xpath:href"
+                  ],
+                  [
+                     "xpath=//li[9]/a",
+                     "xpath:position"
+                  ]
+               ],
+               "value":"",
+               "title":"ניהול תקציבי"
+            }
+         ],
+         "name":"ניהול תקציב"
+      }
+   ]
+}

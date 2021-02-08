@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+  <h1>Siri for Programmers</h1>
+  <form id="siri" method="post" action="/siri" class="form-group">
+    <fieldset>
+      <legend>What</legend>
+      <label for="todo" >What To Do</label>
+      <input class = "form-control" id ="todo" name ="todo" type="text" />
+
+    </fieldset>
+    <br/><br/>
+
+
+    <br/>
+    <input type="button" id = "make" name="make" value="make"/>
+
+  </form>
+</main>
+<script>
+
+  function createElementFromHTML(htmlString) {
+    var div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+    document.body.appendChild(div);
+
+  }
+    $("#make").click(function () {
+      var todo = $("#todo").val();
+      $.post({
+        url: '/siri',
+        data: { 'todo': todo},
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_html) {  createElementFromHTML(data.htmlString)}
+        }});});
+    $(document).on('click', '#update',
+      function () {
+        var data = $('#details').serialize();
+        $.post({
+          url: '/siri',
+          data: { 'update': data},
+          dataType: 'json',
+          success: function (data) {
+            if (data.is_html) {  createElementFromHTML(data.htmlString)}
+                }  })})
+
+
+
+
+
+
+      </script>
+
+{% endblock %}

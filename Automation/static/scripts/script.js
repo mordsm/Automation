@@ -47,13 +47,10 @@ function  startDictation(){
       if (window.hasOwnProperty('webkitSpeechRecognition')) {
 
         var recognition = new webkitSpeechRecognition();
-
         recognition.continuous = false;
         recognition.interimResults = false;
-
         recognition.lang = "he-IL";
         recognition.start();
-
         recognition.onresult = function(e) {
           document.getElementById('transcript').value
                                    = e.results[0][0].transcript;

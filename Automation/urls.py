@@ -23,8 +23,8 @@ from django.views.decorators.csrf import csrf_exempt
 #from Automation.mail_server.views import AutomateMails
 from mail_server.views import AutomateMails
 from selenium_convertor.views.home import HomeView
-from voice_chat.views import SiteImportView, SiteActivateTrial, ModelsView, SiteTraversing, BrowserTraversing
-#from Organize.todolist import views
+from voice_chat.views import SiteImportView, SiteActivateTrial, ModelsView, SiteTraversing, BrowserTraversing, SaveWork, \
+    SiriForProgrammers, SiteTreeActivateTrial
 
 
 class APiTemplateView(TemplateView):
@@ -56,11 +56,14 @@ urlpatterns = [
 
     url('^site/import/$', SiteImportView.as_view(), name='site_import'),
     url('^command$', SiteActivateTrial.as_view(), name='command'),
-    #url('^command_tree$', SiteTreeActivateTrial.as_view(), name='command_tree'),
+    url('^command_tree$', SiteTreeActivateTrial.as_view(), name='command_tree'),
     url('^voice_request', SiteTraversing.as_view(), name='voice_request'),
     url('^browser_request', csrf_exempt(BrowserTraversing.as_view()), name='browser_traversing'),
     url('^models_view', ModelsView.as_view(), name='model_view'),
     url('^mails', AutomateMails.as_view(), name='automate_mails'),
+    url('^save_work', SaveWork.as_view(), name='save_work'),
+    url('^siri', SiriForProgrammers.as_view(), name='Siri for programmers'),
+
     #url('^auth', AuthView.as_view(), name='auth_view'),
     #url("^auth",views.auth),
 
