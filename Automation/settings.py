@@ -86,15 +86,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Automation.wsgi.application'
 
+
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 #django.setup()
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'automation',
         'USER': 'moshe',
-        'PASSWORD': 'postgresql',
+        'PASSWORD': 'postgres',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

@@ -17,7 +17,7 @@ from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_201_CREATED, HTTP_2
 from rest_framework.views import APIView
 
 import speech_recognition as sr
-from setuptools._distutils.command.clean import clean
+#from setuptools._distutils.command.clean import clean
 
 from Automation.settings import ContextViewMixIn, get_context
 from mail_server.pdf_to_text import read_pdf
