@@ -29,7 +29,7 @@ SECRET_KEY = 's^e=45yv(z5ne)s0u_yy79hm$z3xivx4cr60hsh9v1xeg!_u=e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
+TIME_ZONE = 'UTC'
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
@@ -102,7 +102,32 @@ DATABASES = {
     }
 }
 
-# Password validation
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': 'django.log',}
+        },
+
+    'root': {
+        'handlers': ['file'],
+        'level': 'WARNING',
+    },
+    'loggers': {
+            'django': {
+                'handlers': ['file'],
+                'level': 'INFO',
+                'propagate': True,
+            },
+        },
+    }
+
+
+
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [

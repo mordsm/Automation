@@ -1,0 +1,415 @@
+    1  cd
+    2  sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
+    3  mkdir /home/moshe/workspace
+    4  cd /home/moshe/workspace
+    5  mkdir projects
+    6  cd projects/
+    7  sudo apt install git
+    8  git clone https://github.com/mordsm/Automation.git
+    9  apt-get update
+   10  sudo apt-get update
+   11  sudo apt-get install python-virtualenv
+   12  python --version
+   13  python3 --version
+   14  sudo apt-get install python3-virtualenv
+   15  apt-get install -y python3-venv
+   16  sudo apt-get install -y python3-venv
+   17  l
+   18  cd Automation/
+   19  python3 -m venv env
+   20  source env/bin/activate
+   21  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+   22  sudo apt install ./google-chrome-stable_current_amd64.deb
+   23  cd Downloads/
+   24  ls
+   25  sudo tar -xzf jetbrains-toolbox-1.20.8804.tar.gz -C /opt
+   26  cd /opt
+   27  ls
+   28  jetbrains-toolbox
+   29  cd jetbrains-toolbox-1.20.8804/
+   30  jetbrains-toolbox
+   31  ls
+   32  jetbrains-toolbox
+   33  .jetbrains-toolbox
+   34  cd 
+   35  cd Downloads/
+   36  ls
+   37  tar xzf pycharm-*.tar.gz -C /home/moshe/software
+   38  ls
+   39  rm 'pycharm-community-2021.1.2 (1).tar.gz' 
+   40  ls
+   41  tar xzf pycharm-*.tar.gz -C /home/moshe/software
+   42  mkdir /home/moshe/software
+   43  tar xzf pycharm-*.tar.gz -C /home/moshe/software
+   44  cd /home/moshe/software/pycharm-community-2021.1.2/bin/
+   45  sh pycharm.sh 
+   46  pip install atom
+   47  atom
+   48  atom .
+   49  sudo sh -c 'echo "deb [arch=amd64] 
+   50  ;
+   51  sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+   52  sudo apt-get update
+   53  sudo apt-get install atom
+   54  sudo apt-get install atom-beta
+   55  atom .
+   56  jupyter lab
+   57  sudo apt install jupyter-core
+   58  jupyter lab
+   59  python -m pip install jupyterlab
+   60  pip install jupyterlab
+   61  sudo apt install python3-pip
+   62  pip install jupyterlab
+   63  jupyter lab
+   64  pip install jupyterlab
+   65  echo PATH
+   66  echo $PATH
+   67  add the following directory to the PATH in Linux
+   68  PATH="/home/ubuntu/.local/bin:$PATH"
+   69  echo $PATH
+   70  jupyter lab
+   71  cd
+   72  cd workspace/projects/
+   73  ls
+   74  pip install jupyterlab
+   75  pip uninstall jupyterlab
+   76  pip install jupyterlab
+   77  PATH="/home/moshe/.local/bin:$PATH"
+   78  pip install jupyterlab
+   79  jupyter lab
+   80  sudo npm -g install create-react-app
+   81  create-react-app --version
+   82  create-react-app tecmint-app
+   83  npm start
+   84  atom .
+   85  npm start
+   86  code
+   87  sudo snap install --classic code 
+   88  code
+   89  cd ..
+   90  cd web_site/
+   91  npm init
+   92  npm i express body-parser 
+   93  code
+   94  node app.js
+   95  node index.js
+   96  npm install nodemon -g
+   97  sudo npm install nodemon -g
+   98  nodemon index.js
+   99  jupyter lab
+  100  pip install jupyterlab
+  101  jupyter lab
+  102  pip uninstall jupyterlab
+  103  pip install jupyterlab
+  104  cd
+  105  vim .bashrc
+  106  sudo apt install vim
+  107  vim .bashrc
+  108  source .bashrc
+  109  vim .bashrc
+  110  source .bashrc
+  111  jupyter lab
+  112  sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+  113  calibre
+  114  sudo apt-get update
+  115  sudo apt-get install build-essential libssl-dev libffi-dev libgmp3-dev
+  116  wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v2.1/pip/pgadmin4-
+  117    wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v2.1/pip/pgadmin4-
+  118  pip install notepad++
+  119  pip install notepad
+  120  sudo snap install notepad-plus-plus
+  121  wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v2.1/pip/pgadmin4-
+  122  2.1-py2.py3-none-any.whl
+  123  wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v2.1/pip/pgadmin4-2.1-py2.py3-none-any.whl
+  124  pip install pgadmin4-2.1-py2.py3-none-any.whl
+  125  pip install psycopg2
+  126  pip install psycopg2-binary
+  127  pip install pgadmin4-2.1-py2.py3-none-any.whl
+  128  python setup.py build_ext --pg-config /path/to/pg_config build ...
+  129  python3 setup.py build_ext --pg-config /path/to/pg_config build ...
+  130  brew install postgresql
+  131  sudo apt install postgresql
+  132  pip install pgadmin4-2.1-py2.py3-none-any.whl
+  133  sudo apt-get install libpq-dev
+  134  pip install pgadmin4-2.1-py2.py3-none-any.whl
+  135  cd /
+  136  find 2>/dev/null | grep pgadmin4
+  137  find 2>/dev/null | grep pgadmin4/con
+  138  find 2>/dev/null | grep pgadmin4.py
+  139  sudo systemctl is-active postgresql
+  140  sudo systemctl is-enabled postgresql
+  141  sudo systemctl status postgresql
+  142  sudo pg_isready
+  143  sudo su - postgres
+  144  sudo vim /etc/postgresql/12/main/pg_hba.conf 
+  145  sudo systemctl restart postgresql
+  146  curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+  147  sudo snap install curl
+  148  curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+  149  sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+  150  sudo apt install pgadmin4
+  151  history | grep etc
+  152  sudo -u postgres psql
+  153  psql -U postgres
+  154  cd
+  155  psql -U postgres
+  156  psql postgres
+  157  cd /
+  158  ll /etc/postgresql
+  159  cd /etc/postgresql
+  160  ll
+  161  cd /
+  162  find 2>/dev/null | grep pg_hba.conf
+  163  cd /etc/postgresql/12/main/
+  164  sudo vim pg_hba.conf 
+  165  sudo /etc/init.d/postgresql restart
+  166  psql -U postgres
+  167  sudo vim pg_hba.conf 
+  168  sudo /etc/init.d/postgresql restart
+  169  psql
+  170  cd
+  171  psql
+  172  sudo su - postgres
+  173  ls
+  174  vim next.json
+  175  cat next.json 
+  176  vim next.json
+  177  jupyter lab
+  178  cd workspace/projects/
+  179  django-admin startproject tutorial
+  180  sudo apt install python3-django
+  181  python manage.py runserver
+  182  python3 manage.py runserver
+  183  python --version
+  184  python3 --version
+  185  cd
+  186  sudo bash
+  187  python manage.py runserver
+  188  source .bashrc
+  189  vim .bashrc
+  190  python3 manage.py runserver
+  191  cd /home/moshe/workspace/projects
+  192  ls
+  193  ll
+  194  cd ..
+  195  ll
+  196  cd projects
+  197  django-admin startproject tutorial
+  198  ll
+  199  cd tutorial/
+  200  python manage.py runserver
+  201  pyton manage.py startapp db_app
+  202  python manage.py startapp db_app
+  203  cd db_app
+  204  ls
+  205  cat views.py
+  206  vim views.py
+  207  vim urls.py
+  208  pwd
+  209  notepad ++
+  210  cd workspace/projects/
+  211  git clone https://github.com/mordsm/PlayGround.git
+  212  ll
+  213  cd PlayGround/
+  214  python -m venv env
+  215  source env/bin/activate
+  216  ll
+  217  git add -a
+  218  git init
+  219  git
+  220  git add 
+  221  git add .
+  222  git commit -m 'journal init'
+  223  git config --global user.email "sharon.moshe@gmail.com"
+  224  git config --global user.name "moshe"
+  225  git commit -m 'journal init'
+  226  git push
+  227  git push sharon.moshe@gmail.com
+  228  git push 
+  229  django-admin startproject PlayGround
+  230  pip install django
+  231  django-admin startproject PlayGround
+  232  ll
+  233  cd PlayGround/
+  234  django-admin startapp gtd
+  235  ll
+  236  cd gts
+  237  cd gtd
+  238  ll
+  239  cd ..
+  240  ll
+  241  cd ..
+  242  ll
+  243  cd PlayGround/
+  244  ll
+  245  cd PlayGround/
+  246  ll
+  247  vim settings.py 
+  248  python manage.py makemigrations
+  249  ll
+  250  cd ..
+  251  python manage.py makemigrations
+  252  pip install psycopg2
+  253  python manage.py makemigrations
+  254  vim settings.py 
+  255  cd ..
+  256  vim settings.py 
+  257  ll
+  258  cd PlayGround/
+  259  ll
+  260  cd PlayGround/
+  261  vim settings.py 
+  262  cd workspace/projects/PlayGround/
+  263  l
+  264  cd PlayGround/
+  265  ll
+  266  cd PlayGround/
+  267  vim settings.py 
+  268  python manage.py makemigrations
+  269  cd ..
+  270  python manage.py makemigrations
+  271  vim settings.py 
+  272  cd ..
+  273  vim settings.py 
+  274  ll
+  275  cd PlayGround/
+  276  ll
+  277  cd PlayGround/
+  278  ll
+  279  vim settings.py 
+  280  ll
+  281  cd ..
+  282  python manage.py makemigrations
+  283  python manage.py migrate
+  284  python manage.py runserver
+  285  ll
+  286  pwd
+  287  cd workspace/projects/PlayGround/PlayGround/
+  288  ll
+  289  cd PlayGround/
+  290  vim settings.py 
+  291  ll
+  292  cd ..
+  293  ll
+  294  python manage.py runserver
+  295  apt-get install gimp
+  296  sudo apt-get install gimp
+  297  ךך
+  298  ll
+  299  cd PlayGround/
+  300  ll
+  301  vim settings.py
+  302  sudo apt-get install fbreader
+  303  sudo apt-get -y install calibre
+  304  cd workspace/projects/PlayGround/
+  305  ls
+  306  cd PlayGround/
+  307  ls
+  308  python manage.py startapp observer
+  309  cd observer/
+  310  ls
+  311  jupyter lab
+  312  cd workspace/projects/PlayGround/
+  313  ll
+  314  cd PlayGround/
+  315  ll
+  316  cd observer/
+  317  ll
+  318  jupyter lab
+  319  sudo snap install flutter --classic
+  320  flutter doctor
+  321  flutter config --android-sdk
+  322  pwd
+  323  ll
+  324  ll and*
+  325  flutter doctor
+  326  flutter doctor --android-licenses
+  327  flutter doctor
+  328  flutter config --enable-linux-desktop
+  329  flutter clean
+  330  ll
+  331  sudo rm -Rf .pub-cache
+  332  ll
+  333  sdasd
+  334  ll
+  335  sudo rm -Rf .packages
+  336  pwd
+  337  find 2>/dev/null | grep pubspec.yaml
+  338  cd ./AndroidStudioProjects/my_first_app/
+  339  ls
+  340  vim pubspec.yaml 
+  341  flutter pub upgrade
+  342  vim pubspec.yaml 
+  343  flutter pub upgrade
+  344  sudo apt install openjdk-11-jdk
+  345  sudo add-apt-repository ppa:maarten-fonville/android-studio
+  346  sudo apt update
+  347  sudo apt install android-studio
+  348  cd snap/flutter/common/flutter/
+  349  ll
+  350  rm .pub-cache/
+  351  rm -r .pub-cache/
+  352  flutter pub get
+  353  cd
+  354  vim .bashrc 
+  355  jupyter lab
+  356  flutter pub get
+  357  flutter clean
+  358  flutter build apk --split-per-abi --no-sound-null-safety
+  359  ll
+  360  cd build/
+  361  ll
+  362  cd app
+  363  cd outputs/
+  364  ll
+  365  cd apl
+  366  cd apk
+  367  ll
+  368  cd ..
+  369  ll
+  370  cd flutter-apk/
+  371  ll
+  372  pwd
+  373  vim .bashrc
+  374  source .bashrc
+  375  base1
+  376  vim .bashrc
+  377  cd
+  378  vim .bashrc
+  379  base1
+  380  pip install virtualenv
+  381  venv
+  382  sudo apt install venv
+  383  sudo /usr/bin/easy_install virtualenv
+  384  pip install easy_install
+  385  easy_install
+  386  pip install python-setuptools
+  387  pip3 install python-setuptools
+  388  python --version
+  389  sudo apt-get update
+  390  sudo apt-get upgrade
+  391  sudo apt-get install python-setuptools
+  392  easy_install
+  393  ll /usr/bin/
+  394  cd /
+  395  find 2>/dev/null | grep easy
+  396  find 2>/dev/null | grep easy_install
+  397  python -m ./usr/lib/python3/dist-packages/easy_install.py
+  398  sudo easy_install
+  399  pip install --upgrade --force virtualenv
+  400  pip install psycopg2
+  401  cd Automation/
+  402  venv env/bin/Activate
+  403  venv env/bin/activate
+  404  env env/bin/activate
+  405  history | grep  env/bin/activate
+  406  source env/bin/activate
+  407  pip install psycopg2
+  408  base1
+  409  cat requirements.txt 
+  410  ll
+  411  git add -A
+  412  git commit -m'add requirments.txt'
+  413  git push
+  414  history
+  415  history > history.txt

@@ -1,3 +1,5 @@
+from jsonfield import JSONField
+from django.contrib.postgres.fields.jsonb import JSONField
 from  django.db import models
 #from django.db.models import JSONField
 
@@ -20,7 +22,7 @@ class Config(models.Model):
     name = models.CharField(max_length=30)
     code = models.CharField(max_length=30)
     password = models.TextField(max_length=30)
-    data = models.TextField(max_length=300, null=True, blank=True) #JSONField(default=None, blank=True, null=True)
+    data = models.TextField(max_length=300, null=True, blank=True)
 
     def get_code(self):
         return self.code

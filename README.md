@@ -1,13 +1,16 @@
-```plantuml
-@startuml component
-actor client
-node app
-database db
 
+
+lantuml
+@startuml 
+actor client
+
+database db
 db -> app
 app -> client
+
 @enduml
 ```
+
 ```plantuml
 @startuml
     skinparam backgroundColor #EEEBDC

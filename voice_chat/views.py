@@ -116,7 +116,7 @@ class SiteTreeActivateTrial(APIView, ContextViewMixIn):
                 is_logged = False
                 request.session['current_root'] = path[0]
                 path[0] = "login"
-
+            webdriver.ChromeOptions().add_argument('--incognito')
             traverse = Traverse(webdriver.Chrome())
             traverse.__set__(request.session['current_root'],
                              command, data, path,

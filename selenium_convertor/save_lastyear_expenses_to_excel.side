@@ -62,7 +62,7 @@
         ["xpath=//input[@id='userCode']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "vn02727"
+      "value": "vn1964"
     }, {
       "id": "c1373756-38ed-4451-8853-df1e4d104b9b",
       "comment": "",
@@ -86,7 +86,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//div[2]/poalim-mm-field/div/input", "xpath:position"]
       ],
-      "value": "mordsmi8"
+      "value": "ofra1964"
     }, {
       "id": "46616b6e-71cd-4177-a744-df81437f4e69",
       "comment": "",

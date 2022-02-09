@@ -789,7 +789,7 @@ COPY public.selenium_convertor_question (id, question_text, pub_date) FROM stdin
 --
 
 COPY public.voice_chat_config (id, name, code, password, data) FROM stdin;
-5	bankhapoalim	vn02727	mordsmi9	\N
+5	bankhapoalim	vn1964	ofra1964	\N
 6	email	sharon.moshe@gmail.com	mordsmi4	\N
 \.
 

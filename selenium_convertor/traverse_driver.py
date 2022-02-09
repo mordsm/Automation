@@ -2,12 +2,15 @@ import json
 import time
 import logging
 from time import sleep
+import sys
 
 from GoogleTrans2020.Translator import translator
 from selenium.webdriver.common.by import By
 import vlc
+
 import speech_recognition as sr
-heb_dict = {"עובר ושב":"Current account"}
+
+heb_dict = {"עובר ושב": "Current account"}
 logger = logging.getLogger(__name__)
 
 from voice_chat.models import Sites
@@ -21,6 +24,12 @@ from googletrans import Translator
            self.data = json.load(f)
    '''
 
+def log(message):
+    import inspect
+    import gc
+    code = inspect.currentframe().f_back.f_code
+    func = [obj for  obj in  gc.get_referrers(code) if inspect.isfunction(obj)][0]
+    print(func.__qualname__, message)
 
 class Traverse():
 
@@ -33,7 +42,7 @@ class Traverse():
         self.base = base
         self.name = name
         script = script[0]['tree_script']
-        #script[0].replace("\'", "\"")
+        # script[0].replace("\'", "\"")
         self.data = json.loads(script)
 
     def text_to_speech(self, text):
@@ -80,13 +89,15 @@ class Traverse():
         logger.info("Starting 'tree_traverse'")
         try:
             start = 0
+            # TODO temporary fix for debugging  self.is_logged = False
+            self.is_logged = False
             if self.is_logged:
                 start = 1
                 self.action(self.data["home"])
-            steps = self.data[self.name]
+            steps = self.data["tests"]
             for step in steps[start:]:
                 # part = [item for item in self.data[self.base] if item["name"] == action]
-                #part = [item for item in self.data[self.name] if item["name"] == action["name"]]
+                # part = [item for item in self.data[self.name] if item["name"] == action["name"]]
 
                 # part = self.data[action]
                 for command in step["commands"]:
@@ -140,8 +151,9 @@ class Traverse():
 
         result = None
         i = 0;
-        while result == None and i < 3:
+        while result == None and i < 2:
             try:
+                sleep(1)
                 result = translator.translate(text)
             except Exception as e:
                 i = i + 1
@@ -149,15 +161,17 @@ class Traverse():
                 # translator = Translator()
                 sleep(0.5)
                 pass
-        return result.text
+        result = result.text if result is not None else result
+        return result
 
-    def getAny(self,dic, keys, default=None):
+    def getAny(self, dic, keys, default=None):
 
         for k in keys:
             k = k.replace('\n', ' ')
             if k in dic:
                 return dic[k]
         return default
+
     def build_question(self, field_name):
         result = None
         try:
@@ -172,68 +186,83 @@ class Traverse():
             result = "please enter " + field
             return result
         except Exception as e:
+            log(e)
             print("build_question : {} ".format(e))
 
     def action(self, command):
         logger.info("starting 'action'")
         try:
             result = None
-            if command["command"] == "open":
-                element = self.driver.get(command["target"])
-                result = self.driver.title
+            match command["command"]:
+                case "open":
+                    if (len(command["target"]) > 10):
+                        element = self.driver.get(command["target"])
+                    else:
+                        element = self.driver.get(self.data["url"] + command["target"])
+                    self.driver.title
 
-            elif command["command"] == "setWindowSize":
-                sizes = command["target"].split("x")
-                element = self.driver.set_window_size(int(sizes[0]), int(sizes[1]))
-            elif command["command"] == "selectFrame":
-                time.sleep(1)
-                frame = command["target"].split("=")[1]
-                if frame.isnumeric():
-                    self.driver.switch_to.frame(int(frame))
-                elif frame == "parent":
-                    self.driver.switch_to.default_content()
-                # self.wait_for_window()
 
-            elif command["command"] == "click":
-                element, result = self.find_element(command)
-                if element:
-                    try:
-                        lang = detect(result)
-                        if lang == "he":
-                            result_en = self.getAny(heb_dict, [result ])
-                            if result_en == None:
-                                result_en = self.getTranslate(result, dest="en")
-                            #translator.translate(text = result)
-                            self.text_to_speech("please enter " +result_en)
-                            print(result_en)
-                        else:
-                            self.text_to_speech("please enter " + result)
-                            print(result)
-                        element.click()
-                    except Exception as e:
-                        print("error {} on command {} ".format(e, command))
-                else:
-                    print(command)
+                case "setWindowSize":
+                    sizes = command["target"].split("x")
+                    element = self.driver.set_window_size(int(sizes[0]), int(sizes[1]))
+                case "selectFrame":
+                    time.sleep(1)
+                    frame = command["target"].split("=")[1]
+                    if frame.isnumeric():
+                        self.driver.switch_to.frame(int(frame))
+                    elif frame == "parent":
+                        self.driver.switch_to.default_content()
+                    # self.wait_for_window()
 
-            elif command["command"] == "type":
-                element, result = self.find_element(command)
-                element.send_keys(command["value"])
-            elif command["command"] == "mouseOver":
-                element, result = self.find_element(command)
-            elif command["command"] == "mouseOut":
-                element, result = self.find_element(command)
-            elif command["command"] == "doubleClick":
-                element, result = self.find_element(command)
-                element.click()
-            elif command["command"] == "storeWindowHandle":
-                element, result = self.find_element(command)
+                case "click":
+                    element, result = self.find_element(command)
+                    if element:
+                        try:
+                            #  TODO change condition to be specific on unput types using enums
+                            if element.tag_name not in ["span", 'fieldset', 'button', 'a']:
+                                lang = detect(result)
+                                if lang == "he":
+                                    result_en = self.getAny(heb_dict, [result])
+                                    if result_en == None:
+                                        result_en = self.getTranslate(result, dest="en")
+                                    # translator.translate(text = result)
+                                    self.text_to_speech("please enter " + result_en)
+                                    print(result_en)
+                                elif result != None:
+                                    self.text_to_speech("please enter " + result)
+                                    print(result)
 
-            elif command["command"] == "doubleClick":
-                element, result = self.find_element(command)
+                        except Exception as e:
+                            print(f"error {e} on command {command['command']}  target: {command['target']}")
+                        finally:
+                            element.click()
+                    else:
+                        print(command)
+
+                case "type":
+                    element, result = self.find_element(command)
+                    element.clear()
+                    element.send_keys(command["value"])
+                case "mouseOver":
+                    element, result = self.find_element(command)
+                case "mouseOut":
+                    element, result = self.find_element(command)
+                case "doubleClick":
+                    element, result = self.find_element(command)
+                    element.click()
+                case "storeWindowHandle":
+                    element, result = self.find_element(command)
+
+                case "doubleClick":
+                    element, result = self.find_element(command)
+                case _:
+                    result = None
+                    print(f"command {command['command'] } is not handled")
 
             return result, self.driver.title
         except Exception as e:
-            logger.error("action error : {}".format(e))
+            log(e)
+            logger.error(f"action error : {e} command : {command}")
         logger.info("Ending 'action'")
 
     def find_element(self, command):
@@ -242,29 +271,40 @@ class Traverse():
         element = None
         for target in command["targets"]:
             try:
-                element = self.driver.find_element(self.get_locator(target), target[0].split("=", 1)[1])
-                if element.tag_name == "span":
-                    if element.text:
+                locator = self.get_locator(target)
+                trgt = target[0].split("=")[1]
+                element = self.driver.find_element(locator,trgt )
+
+                if element is None:
+                    continue
+                match element.tag_name:
+                    case "label":
+                        result = element.get_attribute("innerText")
+                    case "button":
+                        if element.text:
+                            result = element.text
+                    case "span":
+                        if element.text:
+                            result = element.text
+                    case "a":
                         result = element.text
-                        break
-                elif element.tag_name == "input":
-                    result = self.driver.find_element_by_xpath(
-                        '//label[@for="' + element.get_attribute('id') + '"]').text
-                    break
-                elif element.tag_name == "button":
-                    result = element.text
-                    break
-                elif element.tag_name == "a":
-                    result = element.text
-                    if result == "":
-                        result = element.get_attribute("title")
-                    if result == None:
-                        result = element.get_attribute("aria-label")
-                    break
+                        if result == "":
+                            result = element.get_attribute("title")
+                        elif result is None:
+                            result = element.get_attribute("aria-label")
+                    case "input":
+                        result = self.driver.find_element_by_xpath(
+                            '//label[@for="' + element.get_attribute('id') + '"]').text
+                    case _:
+                        result = element.tag_name
+                        print(f"{element.tag_name} Didn't match a case")
+                return element, result
             except Exception as e:
-                pass
+                print (f"{e} in  {__name__} ->find_element")
+                logger.info(f" Error while searching for {target} or when getting text from it")
+
         logger.info("Ending 'find_element'")
-        return element, result
+
 
     '''
      result = 'get_user_answer("' + question + '").then(ans=>{alert(ans);console.log(ans);' + setAnswer + '}) \
@@ -275,6 +315,7 @@ class Traverse():
 
 
     '''
+
     def convert_to_js(self, data, action):
         try:
             js_data = {}
@@ -306,17 +347,15 @@ class Traverse():
                         elif target_parts[0] == "css":
                             element = "$(" + target_parts[1] + ")"
 
-
-                        setAnswer =element+".val(ans)"
+                        setAnswer = element + ".val(ans)"
                         result = '(async () => {' \
                                  'await get_user_answer("' + question + '")' \
-                                '.then((ans)=>{' + setAnswer + ';})' \
-                                '.catch((error) => {console.log(error);})' \
-                                '.finally((ans)=> {ans  = null}); })();'
-                                #'simulate_input('+element+');'
+                                                                        '.then((ans)=>{' + setAnswer + ';})' \
+                                                                                                       '.catch((error) => {console.log(error);})' \
+                                                                                                       '.finally((ans)=> {ans  = null}); })();'
+                        # 'simulate_input('+element+');'
                         # part["commands"].append(result);
-                # '.then((ans)=>{' + setAnswer + '.trigger("input");})' \
-
+                    # '.then((ans)=>{' + setAnswer + '.trigger("input");})' \
 
                     elif action["command"] == 'open':
                         temp_url = "https://login.bankhapoalim.co.il/ng-portals/auth/he/?frame=false"
@@ -333,9 +372,12 @@ class Traverse():
                 js_data[key].append(part)
 
         except Exception as e:
+            log(e)
             logger.error("convert_to_js {}".format(e), exc_info=True)
             js_data = None
         return js_data
+
+
 '''
     def tree_traverse(self):
         logger.info("Starting 'tree_traverse'")

@@ -1,0 +1,20 @@
+trouble_shooting:
+  error: Nonetype Object Has No Attribute Group
+  where: translate / translation
+  solutions:
+    - linux
+      - pip install git+https://github.com/BoseCorp/py-googletrans.git --upgrade
+      - pip install googletrans==4.0.0-rc1
+      - # google_trans_new :     
+        - pip install google_trans_new
+        - code :
+          - from google_trans_new import google_translator
+          - translator = google_translator()
+          - translate_text = translator.translate('Hola mundo!', lang_src='es', lang_tgt='en')
+      - pip uninstall googletrans googletrans-temp ; pip install googletrans-temp
+
+
+
+
+
+
